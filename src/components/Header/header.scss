@@ -1,16 +1,27 @@
 .header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 
-  &-title {
-    font-size: 5em;
-    font-weight: bold;
-    margin-bottom: 1em;
+  @media (min-width: 300px) {
+    &-title {
+      font-size: 3em;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+
+    // &-navbar {
+    //   display: flex;
+    //   justify-content: space-around;
+    // }
+   
   }
 
-  &-navbar {
-    display: flex;
-    justify-content: space-around;
+  @media (min-width: 650px) {
+    &-title {
+      font-size: 5em;
+      margin-bottom: 1em;
+    }
   }
+
 }

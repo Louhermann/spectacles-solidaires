@@ -1,8 +1,25 @@
+@use 'src/styles/vars';
+
 .footer  {
+
+  @media (min-width: 300px) {
+    background-color: vars.$peach-color;
     display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    &-links {
+      padding: 1em
+
+    }
+  }
+
+  @media (min-width: 650px) {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 4em;
-    width: 100%;
+  }
+
+
 }
