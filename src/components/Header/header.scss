@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+
+  &-navbar {
+    display: flex;
+    justify-content: space-around;
+  }
+}
