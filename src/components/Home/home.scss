@@ -1,25 +1,98 @@
-.home{
-    display: flex;
 
-    &__picture{
-        width: 50%;
-        height: 500px;
-       
-    }
-    &__description{
-        width: 50%;
+@media screen and (max-width: 767px) {
+    .home{
+        background-color: #DF966D;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
         
+    
+        &__title{
+          font-size:0.9em ;
+          font-weight: bold;
+          margin: 0.5em;
+          padding-top: 0.5em; 
+       }
+       &__text{
+        font-size: 0.7em;
+        padding: 1rem; 
+       }
 
-        &--title{
+    }
+}
 
-        font-size:3em ;
-        font-weight: bold;
-        margin: 1em;
+@media screen and (min-width:768px) {
+    .home{
+        height: 20rem;
+        background-image: url("../../assets/images/Model/images/enfant.JPG");
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 1.5rem;
+        
+    
+        &__title{
+          font-size:1.2em ;
+          font-weight: bold;
+          margin: 0.5em;
+          padding-top: 0.5em;
+          width: 40%; 
+       }
+
+       &__text{
+            font-size: 0.8em;
+            padding: 1rem;
+            width: 40%; 
+       }
+
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .home{
+        height: 50rem;
+        padding: 1.5rem;
+    &__title{
+        font-size:2.2em ;
         }
-        &--text{
-            font-size: 1.5em;
-            text-align: center;
-            padding: 3rem;
-        }
+  
+    &__text{
+        font-size: 1.1em;
+        }  
+
+    }
+}
+
+
+@media screen and (min-width: 1439px) {
+    .home{
+   
+        &__title{
+          font-size:2.2em ;
+       }
+
+       &__text{
+            font-size: 1.6em;
+       }
+
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .home{
+   padding-top: 5rem;
+        &__title{
+          font-size:2.2em ;
+          margin-bottom: 5rem;
+       }
+
+       &__text{
+            font-size: 1.6em;
+       }
+
     }
 }
