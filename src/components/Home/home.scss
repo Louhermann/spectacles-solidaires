@@ -1,0 +1,25 @@
+.home{
+    display: flex;
+
+    &__picture{
+        width: 50%;
+        height: 500px;
+       
+    }
+    &__description{
+        width: 50%;
+        
+
+        &--title{
+
+        font-size:3em ;
+        font-weight: bold;
+        margin: 1em;
+        }
+        &--text{
+            font-size: 1.5em;
+            text-align: center;
+            padding: 3rem;
+        }
+    }
+}
