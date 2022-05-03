@@ -1,5 +1,4 @@
 // == npm
-import { Zoom } from 'react-slideshow-image';
 
 // == Import
 import './slider.scss';
@@ -33,24 +32,11 @@ const images = [
   image11,
 ];
 
-const zoomOutProperties = {
-  duration: 5000,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  scale: 0.4,
-  arrows: true,
-};
-
 // == Composant
 function Slider() {
   return (
-    <div className="slider-container">
-      <Zoom {...zoomOutProperties}>
-        {images.map((each, index) => (
-          <img className="slider-container-img" style={{ height: '50%', width: '100%' }} key={index} src={each} alt="" />
-        ))}
-      </Zoom>
+    <div className="slider">
+      <img className="slider-img" alt="" />
     </div>
   );
 }

@@ -8,6 +8,7 @@
           font-size: 3em;
           font-weight: bold;
           margin-bottom: 1em;
+          font-family: 'Allura', sans-serif;
         }
       
         &-navbar {
@@ -22,6 +23,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #DF966D;
+
 
   &-title {
     font-size: 5em;

@@ -1,12 +1,11 @@
-@import "react-slideshow-image/dist/styles.css";
 
-.slider-container {
-  width:40%;
+
+.slider {
+  width: 45%;
   margin: 2rem auto;
   
-//   &-img {
-//     width: 100%;
-//     height: 70%;
-//   }
+  &-img {
+    width: 100%;
+    height: 55%;
+  }
 }
-
