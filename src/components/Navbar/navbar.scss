@@ -1,9 +1,9 @@
 .navbar {
   width: 100%;
-  height: 50px;
+  height: fit-content;
 
   // to make the burger disapeat in desktop version 
-  @media (min-width: 768px) {
+  @media (min-width: 650px) {
     .hamburger {
       display: none;
     }

@@ -1,10 +1,9 @@
 // == npm
-import React, { Component } from "react";
+import { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
 // import uuidv4 from "uuid";
 // import {v4 as uuid} from "uuid"; 
 import { config } from "react-spring";
-
 // == Import
 import './slider.scss';
 
@@ -24,10 +23,10 @@ import image11 from '../../assets/images/Sur le port de chine/Sur_le_port.jpg';
 
 export default class Slider extends Component {
   state = {
-    goToSlide: 0,
-    offsetRadius: 2,
+    // goToSlide: 0,
+    // offsetRadius: 2,
     showNavigation: true,
-    config: config.gentle
+    config: config.gentle,
   };
 
   slides = [
@@ -61,31 +60,23 @@ export default class Slider extends Component {
     },
     {
       // key: uuidv4(),
-      content: <img src={image8} alt="8" />
-    },
-    {
-      // key: uuidv4(),
-      content: <img src={image9} alt="9" />
-    },
-    {
-      // key: uuidv4(),
-      content: <img src={image10} alt="10" />
-    },
-    {
-      // key: uuidv4(),
-      content: <img src={image11} alt="11" />
-    },
-    {
-      // key: uuidv4(),
-      content: <img src={image7} alt="12" />
-    },
-    {
-      // key: uuidv4(),
-      content: <img src={image7} alt="13" />
-    },
-    {
-      // key: uuidv4(),
       content: <img src={image7} alt="8" />
+    },
+    {
+      // key: uuidv4(),
+      content: <img src={image8} alt="9" />
+    },
+    {
+      // key: uuidv4(),
+      content: <img src={image9} alt="10" />
+    },
+    {
+      // key: uuidv4(),
+      content: <img src={image10} alt="11" />
+    },
+    {
+      // key: uuidv4(),
+      content: <img src={image11} alt="12" />
     },
   ].map((slide, index) => {
     return { ...slide, onClick: () => this.setState({ goToSlide: index }) };
@@ -99,7 +90,7 @@ export default class Slider extends Component {
 
   render() {
     return (
-      <div style={{ width: "80%", height: "500px", margin: "0 auto" }}>
+      <div className="carousel" style={{ width: "80%", height: "500px", margin: "4em auto" }}>
         <Carousel
           slides={this.slides}
           goToSlide={this.state.goToSlide}
@@ -107,80 +98,7 @@ export default class Slider extends Component {
           showNavigation={this.state.showNavigation}
           animationConfig={this.state.config}
         />
-        <div
-          style={{
-            margin: "0 auto",
-            marginTop: "2rem",
-            width: "50%",
-            display: "flex",
-            justifyContent: "space-around"
-          }}
-        >
-          <div>
-            <label>Go to slide: </label>
-            <input name="goToSlide" onChange={this.onChangeInput} />
-          </div>
-          <div>
-            <label>Offset Radius: </label>
-            <input name="offsetRadius" onChange={this.onChangeInput} />
-          </div>
-          {/* <div>
-            <label>Show navigation: </label>
-            <input
-              type="checkbox"
-              checked={this.state.showNavigation}
-              name="showNavigation"
-              onChange={e => {
-                this.setState({ showNavigation: e.target.checked });
-              }}
-            />
-          </div> */}
-          <div>
-            <button
-              onClick={() => {
-                this.setState({ config: config.gentle });
-              }}
-              disabled={this.state.config === config.gentle}
-            >
-              Gentle Transition
-            </button>
-          </div>
-          <div>
-            <button
-              onClick={() => {
-                this.setState({ config: config.slow });
-              }}
-              disabled={this.state.config === config.slow}
-            >
-              Slow Transition
-            </button>
-          </div>
-          <div>
-            <button
-              onClick={() => {
-                this.setState({ config: config.wobbly });
-              }}
-              disabled={this.state.config === config.wobbly}
-            >
-              Wobbly Transition
-            </button>
-          </div>
-          <div>
-            <button
-              onClick={() => {
-                this.setState({ config: config.stiff });
-              }}
-              disabled={this.state.config === config.stiff}
-            >
-              Stiff Transition
-            </button>
-          </div>
         </div>
-      </div>
     );
   }
 }
-
-
-// == Export
-// export default Slider;

@@ -34,9 +34,9 @@ function Navbar() {
      {/* TODO : add transition for prettier result */}
 
      <style jsx="true">{`
-     @media (max-width: 767px) {
+     @media (max-width: 650px) {
        .navbar {
-         height: ${hamburgerOpen ? '100vh' : '50px'};
+         height: ${hamburgerOpen ? 'fit-content' : '50px'};
        }
        .navbar ul {
          display: ${hamburgerOpen ? 'flex' : 'none'};

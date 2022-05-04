@@ -56,7 +56,7 @@
     "react-dom": "^17.0.2",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^2.0.3",
     "react-slideshow-image": "^3.7.3",
     "react-spring": "^9.4.4",
     "react-spring-3d-carousel": "^1.2.1",

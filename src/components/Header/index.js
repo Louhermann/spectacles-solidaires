@@ -7,7 +7,7 @@ import Navbar from 'src/components/Navbar';
 function Header() {
   return (
     <div className="header">
-      <h1 className="header-title">Spectacles solidaire</h1>
+      <h1 className="header-title">Spectacles solidaires</h1>
       <Navbar />
     </div>
   );
