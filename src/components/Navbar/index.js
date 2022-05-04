@@ -33,7 +33,7 @@ function Navbar() {
      {/* TODO : find a way to do this in the scss file */}
      {/* TODO : add transition for prettier result */}
 
-     <style jsx>{`
+     <style jsx="true">{`
      @media (max-width: 767px) {
        .navbar {
          height: ${hamburgerOpen ? '100vh' : '50px'};
