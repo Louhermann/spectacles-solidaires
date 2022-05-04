@@ -11,6 +11,7 @@ function App() {
     <div className="app">
       <Header />
       <Home />
+      <Slider />
       <Footer />
     </div>
   );
