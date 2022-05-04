@@ -1,7 +1,7 @@
 // == npm
 import { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
-// import uuidv4 from "uuid";
+import uuidv4 from "uuid";
 // import {v4 as uuid} from "uuid"; 
 import { config } from "react-spring";
 // == Import
@@ -31,51 +31,51 @@ export default class Slider extends Component {
 
   slides = [
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image0} alt="1" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image1} alt="2" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image2} alt="3" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image3} alt="4" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image4} alt="5" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image5} alt="6" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image6} alt="7" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image7} alt="8" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image8} alt="9" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image9} alt="10" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image10} alt="11" />
     },
     {
-      // key: uuidv4(),
+      key: uuidv4(),
       content: <img src={image11} alt="12" />
     },
   ].map((slide, index) => {
