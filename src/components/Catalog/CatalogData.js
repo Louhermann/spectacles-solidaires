@@ -9,6 +9,8 @@ import image7 from '../../assets/images/Badou/Badou.jpg';
 import image8 from '../../assets/images/Nekolo/Nekolo.jpg';
 import image9 from '../../assets/images/Petite ombre/Petite_ombre.jpg';
 import image10 from '../../assets/images/Sur le port de chine/Sur_le_port.jpg';
+import image11 from '../../assets/images/Aliko/Aliko.jpg';
+import image12 from '../../assets/images/Les repriseuses de l_ouest/Les repriseuses.jpg';
 
 
  export const catalogData = [
@@ -51,6 +53,14 @@ import image10 from '../../assets/images/Sur le port de chine/Sur_le_port.jpg';
   {
     name: "Sur le port de Chine",
     content: <img src={image10} alt="10" />,
-  },  
+  }, 
+  {
+    name: "Aliko",
+    content: <img src={image11} alt="11" />,
+  },   
+  {
+    name: "Les repriseuses de l'ouest",
+    content: <img src={image12} alt="12" />,
+  },
   
 ];
