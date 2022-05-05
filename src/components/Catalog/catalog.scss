@@ -1,0 +1,38 @@
+@media screen and (min-width: 279px) {
+  .catalog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .catalog__show {
+    margin: 2rem;
+    text-align: center;
+  }
+
+  .catalog__show-title {
+    padding: 2rem;
+  }
+
+  img {
+    height: 19rem;
+    width: 15rem;
+}
+}
+
+@media screen and (min-width: 1025px) {
+
+  img {
+
+    height: 30em;
+    width: 20em;
+
+}
+
+.catalog__show {
+  margin: 5rem;
+}
+}
+
