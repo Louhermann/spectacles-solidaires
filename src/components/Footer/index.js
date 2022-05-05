@@ -1,12 +1,13 @@
 // == Import
 import './footer.scss';
+import { NavLink } from 'react-router-dom';
 
 // == Composant
 function Footer() {
   return (
     <div className="footer">
-      <a className="footer-links" href="#">Contact</a>
-      <a className="footer-links" href="#">À propos</a>
+      <NavLink to="Contact">Contact</NavLink>
+      <NavLink to="Apropos">A propos</NavLink>
     </div>
   );
 }
