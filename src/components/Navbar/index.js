@@ -2,6 +2,7 @@
 import Hamburger from 'hamburger-react';
 import { useState } from 'react';
 import './navbar.scss';
+import { AiOutlineUser } from 'react-icons/ai';
 
 // == Composant
 function Navbar() {
@@ -12,7 +13,7 @@ function Navbar() {
      setHamburgerOpen(!hamburgerOpen);
   }
   return (
-    <div className="navbar">
+    <div className={hamburgerOpen ? 'navbar-open' : 'navbar'}>
 
     {/* menu icon - only visible in mobile version */}
       <div className='hamburger' onClick={toggleHamburger}>
@@ -20,34 +21,20 @@ function Navbar() {
       </div>
 
      {/* menu items */}
-     <ul>
+     <ul className={hamburgerOpen ? 'ul-open' : 'ul-close'}>
        <li>Accueil</li>
        <li>Spectacles</li>
        <li>Contact</li>
        <li>À propos</li>
+       <li>
+          <AiOutlineUser
+            size="40px"
+            title="se connecter"
+          />
+          Se connecter
+        </li>
      </ul>
 
-
-
-     {/* to display the burger menu only in mobile version */}
-     {/* TODO : find a way to do this in the scss file */}
-     {/* TODO : add transition for prettier result */}
-
-     <style jsx>{`
-     @media (max-width: 767px) {
-       .navbar {
-         height: ${hamburgerOpen ? '100vh' : '50px'};
-       }
-       .navbar ul {
-         display: ${hamburgerOpen ? 'flex' : 'none'};
-         flex-direction: ${hamburgerOpen ? 'column' : 'row'};
-         justify-content: ${hamburgerOpen ? 'space-around' : 'none'};
-         height :  ${hamburgerOpen ? '100%' : '50px'};
-       }
-       }
-     `}
-
-     </style>
     </div>
   );
 }
