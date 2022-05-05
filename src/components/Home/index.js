@@ -1,12 +1,14 @@
 // Import styles
 import './home.scss';
+import Slider from 'src/components/Slider';
 
 // == Img
 
 function Home() {
   return (
+    <>
     <div className="home">
-      <h1 className="home__title ">Descritpion du site</h1>
+      <h1 className="home__title ">Description du site</h1>
       <p className="home__text">
         " It is a long established fact that a reader will be distracted by the readable
         content of a page when looking at its layout.
@@ -21,6 +23,10 @@ function Home() {
       </p>
 
     </div>
+    <div>
+      <Slider />
+    </div>
+    </>
   );
 }
 

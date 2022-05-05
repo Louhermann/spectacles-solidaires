@@ -2,7 +2,6 @@
 import './header.scss';
 import Navbar from 'src/components/Navbar';
 
-
 // == Composant
 function Header() {
   return (

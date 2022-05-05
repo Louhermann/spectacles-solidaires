@@ -1,23 +1,35 @@
-.navbar {
-  width: 100%;
-  height: fit-content;
+  @media (min-width: 300px) {
+    .navbar {
+      padding-left: 2rem;
+    }
 
-  // to make the burger disapeat in desktop version 
-  @media (min-width: 650px) {
-    .hamburger {
-      display: none;
+    // menu items styling
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
     }
   }
 
-// menu items styling
-  ul {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+  @media (min-width: 650px) {
+    .navbar {
+      width: 100%;
+      height: fit-content;
+    }
+    
+      // to make the burger disapeat in desktop version 
+    .hamburger {
+      display: none;
+    }
+
   }
 
-  ul li {
-    list-style-type: none;
-  }
 
-}

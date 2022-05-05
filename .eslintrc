@@ -37,8 +37,8 @@
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
   },
-  "parserOptions": { "requireConfigFile" : "false" },
-  "babelOptions": { "configFile": "./.babelrc" },
+  // "parserOptions": { "requireConfigFile" : "false" },
+  // "babelOptions": { "configFile": "./.babelrc" },
   "settings": {
     "import/resolver": {
       "alias": {
