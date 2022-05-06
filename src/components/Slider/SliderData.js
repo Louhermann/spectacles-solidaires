@@ -1,4 +1,4 @@
-// Import of Universally unique identifier for generate keys 
+// Import of Universally unique identifier for generate keys
 import uuidv4 from 'uuid';
 
 // == Image
@@ -17,42 +17,42 @@ import image10 from '../../assets/images/Sur le port de chine/Sur_le_port.jpg';
 export const sliderData = [
   {
     key: uuidv4(),
-    content: <img src={image1} alt="1" />,
+    content: <img className="carousel__picture" src={image1} alt="1" />,
   },
   {
     key: uuidv4(),
-    content: <img src={image2} alt="2" />,
+    content: <img className="carousel__picture" src={image2} alt="2" />,
   },
   {
     key: uuidv4(),
-    content: <img src={image3} alt="3" />,
+    content: <img className="carousel__picture" src={image3} alt="3" />,
   },
   {
     key: uuidv4(),
-    content: <img src={image4} alt="4" />,
+    content: <img className="carousel__picture" src={image4} alt="4" />,
   },
   {
     key: uuidv4(),
-    content: <img src={image5} alt="5" />,
+    content: <img className="carousel__picture" src={image5} alt="5" />,
   },
   {
     key: uuidv4(),
-    content: <img src={image6} alt="6" />,
+    content: <img className="carousel__picture" src={image6} alt="6" />,
   },
   {
     key: uuidv4(),
-    content: <img src={image7} alt="7" />,
+    content: <img className="carousel__picture" src={image7} alt="7" />,
   },
   {
     key: uuidv4(),
-    content: <img src={image8} alt="8" />,
+    content: <img className="carousel__picture" src={image8} alt="8" />,
   },
   {
     key: uuidv4(),
-    content: <img src={image9} alt="9" />,
+    content: <img className="carousel__picture" src={image9} alt="9" />,
   },
   {
     key: uuidv4(),
-    content: <img src={image10} alt="10" />,
+    content: <img className="carousel__picture" src={image10} alt="10" />,
   },
 ];
