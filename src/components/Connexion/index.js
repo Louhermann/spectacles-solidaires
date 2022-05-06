@@ -6,11 +6,11 @@ function Connexion() {
   return (
     <form method="post" className="connexion">
       <div className="connexion-div">
-        <label htmlFor="name">Nom d'utilisateur:</label>
+        <label>Nom d'utilisateur:</label>
         <input type="text" name="name" placeholder="Nom d'utilisateur" required />
       </div>
       <div className="connexion-div">
-        <label htmlFor="name">Mot de passe:</label>
+        <label>Mot de passe:</label>
         <input type="password" name="password" placeholder="Mot de passe" required />
       </div>
       <div>
