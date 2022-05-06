@@ -1,4 +1,29 @@
 .show{
 
+  display: flex;
+  width: 95%;
+  height: 90vh;
   background-color: antiquewhite;
+  margin: 1em auto;
+
+  &__left {
+    width: 45%;
+    position: relative;
+
+    &--video {
+      width: 6em;
+      height: 6em;
+      border-radius: 16em;
+      background-color: white;
+      position: relative;
+      top: -20px;
+      left: -20px;
+
+      &--a {
+        margin: auto;
+        color: red;
+      }
+    }
+
+  }
 }
