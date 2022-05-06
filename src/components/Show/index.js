@@ -4,7 +4,7 @@ import './show.scss';
 // == Composant
 function Show() {
   return (
-    <div className="">
+    <div className="show">
       Ici sera la page du spectacle
     </div>
   );
