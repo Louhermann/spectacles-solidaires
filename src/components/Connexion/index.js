@@ -4,9 +4,19 @@ import './connexion.scss';
 // == Composant
 function Connexion() {
   return (
-    <div className="">
-      Ici sera la page de connexion
-    </div>
+    <form method="post" className="connexion">
+      <div className="connexion-div">
+        <label>Nom d'utilisateur:</label>
+        <input type="text" name="name" placeholder="Nom d'utilisateur" required />
+      </div>
+      <div className="connexion-div">
+        <label>Mot de passe:</label>
+        <input type="password" name="password" placeholder="Mot de passe" required />
+      </div>
+      <div>
+        <button className="connexion-button" type="submit">Se connecter</button>
+      </div>
+    </form>
   );
 }
 
