@@ -3,7 +3,7 @@
 import { catalogData } from './CatalogData';
 // Style
 import './catalog.scss';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 // == Composant
 function Catalog() {

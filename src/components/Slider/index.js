@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-indent */
 // == npm
 import { useState, useEffect } from 'react';
 import Carousel from "react-spring-3d-carousel";
@@ -9,16 +10,15 @@ import './slider.scss';
 
 function Slider() {
   const [goToSlide, setGoToSlide] = useState(0);
-  const [offsetRadius, setOffsetRadius] = useState(1);
+  const [offsetRadius, setOffsetRadius] = useState(2);
   const [showNavigation, setShowNavigation] = useState(true);
 
   sliderData.map((slide, index) => {
-return { ...slide, onClick: () => setGoToSlide({index}) }
-});
-    
-return (
-  <div className="carousel" >
-    <h1 className='carousel__title'>Nos Spectacles </h1>
+ return { ...slide, onClick: () => setGoToSlide({index}) }});
+
+  return (
+  <div className="carousel">
+    <h1 className="carousel__title">Nos Spectacles </h1>
       <div className="carousel-container">
         <Carousel
           slides={sliderData}
@@ -27,10 +27,10 @@ return (
           showNavigation={showNavigation}
           animationConfig={config.slow}
         />
-        </div>
-    </div>
-    );
-  }
+      </div>
+  </div>
+  );
+}
 
 export default Slider;
 // style={{ width: "80%", height: "500px", margin: "12em auto" }}
