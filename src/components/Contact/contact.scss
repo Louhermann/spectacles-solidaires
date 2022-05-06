@@ -38,6 +38,7 @@
     }
 
     &__input{
+      width: 80%;
       height: 100%;
       background: transparent;
       outline: none;
@@ -45,7 +46,7 @@
       padding-left: 2rem;
       border: 5px solid rgba(0, 0, 0, 0.3);
       box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
-      color: #ffffff;
+      color: rgba(0, 0, 0, 0.3);
       border-radius: 50px;
 
       &--submit:hover{
@@ -79,14 +80,14 @@
 
     &__label{
       line-height: 40px;
-     color:white;
+      color:rgba(0, 0, 0, 0.3);
       font-size: 24px;
       margin: 0 0 0 30px;
       display: block;
     }
 
     &__textarea{
-      width: 90%;
+      width:80%;
       height: 10rem;
       background: transparent;
       outline: none;
