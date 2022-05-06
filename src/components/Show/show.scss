@@ -3,6 +3,7 @@ img {
   height: 10px;
 }
 
+//div left
 .show{
   display: flex;
   width: 95%;
@@ -12,23 +13,46 @@ img {
 
   &__left {
     width: 45%;
-    position: relative;
 
     &--video {
-      width: 6em;
-      height: 6em;
-      border-radius: 16em;
       background-color: white;
-      position: relative;
+      border-radius: 16em;
       top: -20px;
       left: -20px;
+      width: 6em;
+      height: 6em;
+      overflow: hidden;
+      position: relative;
 
       &--a {
-        font-size: 3em;
-        margin: auto;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        font-size: 10rem;
         color: red;
+       
       }
     }
 
+    &--age {
+    }
+
+  }
+
+
+  // div center
+  
+  .show__center {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around ;
+  
+    .show__center--categories {
+      display: flex;
+      flex-direction: column;
+      border: 3px solid rgba(0, 0, 0, 0.3);
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 2em;
+    }
   }
 }

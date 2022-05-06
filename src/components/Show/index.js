@@ -12,7 +12,7 @@ function Show() {
       <div className="show__left">
         {/* here the video */}
         <div className="show__left--video">
-          <a href="" className="show__left--video--a"><BsYoutube /></a>
+          <a href="" className="show__left--video--a"> <BsYoutube /></a>
         </div>
         {/* age */}
         <div className="show__left--age">
