@@ -12,53 +12,64 @@ import image10 from '../../assets/images/Sur le port de chine/Sur_le_port.jpg';
 import image11 from '../../assets/images/Aliko/Aliko.jpg';
 import image12 from '../../assets/images/Les repriseuses de l_ouest/Les repriseuses.jpg';
 
-
- export const catalogData = [
+export const catalogData = [
   {
+    id:1,
     name: "Artichocolat",
     content: <img src={image1} alt="1" />,
   },
   {
+    id:2,
     name: "La note magique",
     content: <img src={image2} alt="2" />,
   },
   {
+    id:3,
     name: "Le murmure de la mer",
     content: <img src={image3} alt="3" />,
   },
   {
+    id:4,
     name: "Les défis et énigmes",
     content: <img src={image4} alt="4" />,
   },
   {
+    id:5,
     name: "Les expériences spectaculaires",
     content: <img src={image5} alt="5" />,
   },
   {
+    id:6,
     name: "Les mains baradeuses",
     content: <img src={image6} alt="6" />,
   },
   {
-    name: "Badou",
+    id:7,
+    name: 'Badou',
     content: <img src={image7} alt="7" />,
   },
   {
-    name: "Nekolo",
+    id:8,
+    name: 'Nekolo',
     content: <img src={image8} alt="8" />,
   },
   {
-    name: "Petite ombre",
+    id:9,
+    name: 'Petite ombre',
     content: <img src={image9} alt="9" />,
   },
   {
-    name: "Sur le port de Chine",
+    id:10,
+    name: 'Sur le port de Chine',
     content: <img src={image10} alt="10" />,
   }, 
   {
-    name: "Aliko",
+    id: 11,
+    name: 'Aliko',
     content: <img src={image11} alt="11" />,
   },   
   {
+    id: 12,
     name: "Les repriseuses de l'ouest",
     content: <img src={image12} alt="12" />,
   },
