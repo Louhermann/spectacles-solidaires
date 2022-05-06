@@ -1,6 +1,6 @@
 // == Import : local
 // Data
-import { catalogData } from './CatalogData';
+import catalogData from './CatalogData';
 // Style
 import './catalog.scss';
 // import { NavLink } from 'react-router-dom';
