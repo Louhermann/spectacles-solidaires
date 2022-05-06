@@ -5,50 +5,89 @@
     padding-bottom: 12vh;
   }
 
-  // menu items styling
-  ul {
+  .navbar-open {
+    background-color: #FFE8D2;
+    opacity: 0.5;
+  }
+
+  .ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
   }
 
-  li {
+  .list-item {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', 'Sans serif';
+    font-weight: bold;
+    font-size: 2.25rem;
+    color: rgba(0, 0, 0, 0.3);
     list-style-type: none;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    padding: 1rem;
+    text-decoration: none;
+  }
+
+  .li {
+    padding: 3rem;
+  }
+
+  .ul-open, .ul-close {
+    list-style: none;
+     display: flex;
+  }
+
+  .list-item:hover {
+    color: black;
+    transition: all 0.5s ease-in-out;
+  }
+    
+  .icon {
+    margin-left: 37%;
+  }
+
+  .login-item {
+    margin-bottom: 4.6em;
+    margin-left: 2.5em;
   }
 }
 
-
-  // to make the burger disapeat in desktop version 
-@media (min-width: 768px) {
+@media (min-width: 1079px) {
     .hamburger {
       display: none;
     }
 
+  .login-item {
+    margin-bottom: 2.5em;
+  }
 }
 
-@media (max-width: 767px) {
-    .navbar-open {
-      height: fit-content;
-      border-top : 2px dotted black;
-      border-bottom :2px dotted black;
-    }
-
-    .ul-close {
-      display: none;
-    }
-
-    .ul-open {
-      display: flex;
-      flex-direction:column;
-      justify-content: space-around;
-      height : 100%;
-      transition: 1s max-height 0.3s;
-    }
+@media (max-width: 1078px) {
+  .navbar-open {
+    height: fit-content;
   }
 
-  
+  .nav-close {
+    display: none;
+  }
+
+  .ul-open {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    height : 100%;
+    transition: 1s max-height 0.3s;
+  }
+
+  .li {
+    padding: 1.25em;
+  }
+
+
+  .login-item {
+    margin: 1.5em 1.5em 1.5em 1.5em;
+  }
+
+}
+
+
+ 
