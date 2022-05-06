@@ -1,5 +1,6 @@
 // == Import
 import './show.scss';
+import { BsYoutube } from 'react-icons/bs';
 import image1 from '../../assets/images/Artichocolat/Artichocolat.jpg';
 import image2 from '../../assets/images/Artichocolat/Artichocolat_mini.jpg';
 
@@ -11,7 +12,7 @@ function Show() {
       <div className="show__left">
         {/* here the video */}
         <div className="show__left--video">
-          <a href="" className="show__left--video--a">LA VIDEO</a>
+          <a href="" className="show__left--video--a"><BsYoutube /></a>
         </div>
         {/* age */}
         <div className="show__left--age">

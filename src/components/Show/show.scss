@@ -1,5 +1,9 @@
-.show{
+img {
+  width: 10px;
+  height: 10px;
+}
 
+.show{
   display: flex;
   width: 95%;
   height: 90vh;
@@ -20,6 +24,7 @@
       left: -20px;
 
       &--a {
+        font-size: 3em;
         margin: auto;
         color: red;
       }
