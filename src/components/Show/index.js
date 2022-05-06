@@ -3,7 +3,6 @@ import './show.scss';
 import { BsYoutube } from 'react-icons/bs';
 import image1 from '../../assets/images/Artichocolat/Artichocolat.jpg';
 import image2 from '../../assets/images/Artichocolat/Artichocolat_mini.jpg';
-
 // == Composant
 function Show() {
   return (
@@ -57,11 +56,14 @@ function Show() {
 
       {/* div right */}
       <div className="show__right">
-        <img className="show__right--picture" src={image1} alt="2" />
+        <div className="show__right--back">
+          <img className="show__right--picture" src={image1} alt="2" />
+          <p className="show__right--desc">
+            + atelier enfant 1h
+          </p>
+
+        </div>
       </div>
-      <p className="show__right--desc">
-        petite description
-      </p>
     </div>
   );
 }
