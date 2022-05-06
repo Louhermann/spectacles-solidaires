@@ -1,7 +1,4 @@
-img {
-  width: 10px;
-  height: 10px;
-}
+
 
 .show{
   display: flex;
@@ -22,13 +19,27 @@ img {
       position: relative;
       top: -20px;
       left: -20px;
+      overflow: hidden;
+
 
       &--a {
-        font-size: 3em;
+        position: absolute;
+        top: -30px;
+        left: -30px;
         margin: auto;
         color: red;
+        font-size: 10rem;
+        border-radius: 50%;
+      
       }
     }
 
   }
+
+  &__right{
+width: 30%;
+
+  }
 }
+
+

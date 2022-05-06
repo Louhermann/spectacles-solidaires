@@ -12,7 +12,9 @@ function Show() {
       <div className="show__left">
         {/* here the video */}
         <div className="show__left--video">
-          <a href="" className="show__left--video--a"><BsYoutube /></a>
+          <a href="" className="show__left--video--a">
+            <BsYoutube />
+          </a>
         </div>
         {/* age */}
         <div className="show__left--age">
@@ -50,12 +52,12 @@ function Show() {
           <li>Categorie</li>
         </ul>
         <a className="show__center--tarif">+ d'infos et tarifs sur demande !</a>
-        <img className="show__center--picture" src={image1} alt="1" />
+        <img className="show__center--picture" src={image2} alt="1" />
       </div>
 
       {/* div right */}
       <div className="show__right">
-        <img className="show__right" src={image2} alt="2" />
+        <img className="show__right--picture" src={image1} alt="2" />
       </div>
       <p className="show__right--desc">
         petite description
