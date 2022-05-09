@@ -55,4 +55,58 @@ export const sliderData = [
     key: uuidv4(),
     content: <img className="carousel__picture" src={image10} alt="10" />,
   },
-];
+].map((slide, index) => ({ ...slide, onClick: () => setState({ goToSlide: index }) }));
+
+/* <label>Show navigation: </label>
+          <input
+            type="checkbox"
+            checked={state.showNavigation}
+            name="showNavigation"
+            onChange={(e) => {
+              setState({ showNavigation: e.target.checked });
+            }}
+          />
+        </div>
+        <div>
+          <button
+            type="button"
+            onClick={() => {
+              this.setState({ config: config.gentle });
+            }}
+            disabled={state.config === config.gentle}
+          >
+            Gentle Transition
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              this.setState({ config: config.slow });
+            }}
+            disabled={state.config === config.slow}
+          >
+            Slow Transition
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              this.setState({ config: config.wobbly });
+            }}
+            disabled={state.config === config.wobbly}
+          >
+            Wobbly Transition
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              this.setState({ config: config.stiff });
+            }}
+            disabled={state.config === config.stiff}
+          >
+            Stiff Transition
+          </button>
+  {/* //   // </div> */ }
+// </div>
+// </div>
