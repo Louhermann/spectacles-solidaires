@@ -446,48 +446,93 @@
         
         
       }
-      //div right
-      &__right{
-        
-      width: 30%;
-     position: relative;
-    
-    
-      &--back{
+}
    
-      position: absolute; 
-      top: 43%; 
-      left: 40%; 
-      transform: translate(-50%, -50%) rotate(5deg); 
-      background-color: white;
-      width: 100%;
-      height: auto;
-      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   
+@media screen and (min-width: 1024px) {
+
+      .show {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    
+        &__left {
+          width: 40%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+          background-image: url('../../assets/images/Model/images/feuille_careau.png');
+          background-repeat: no-repeat;
+          background-size: cover;
      
-    }
-      &--picture{
-        width: 85%;
-        height: auto;
-        margin: 1.5rem auto 0;
-      
+          &--video {
+            top: -20px;
+            left: -20px;
+            background-color: white;
+            width: 6rem;
+            height: 6rem;
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+  
+            &--logo {
+              position: absolute;
+              top: -30px;
+              left: -30px;
+              margin: auto;
+              color: red;
+              font-size: 10rem;        
+            }
+          }
+  
+        &--age {
+          display: flex;
+          position: absolute;
+          top: -0.5em;
+          left: 12em;
+          transform: rotate(-5deg);
+          background-color: white;
+          width: 22em;
+          height: 3.5em;
+        }
+  
+        &--age>p {
+          font-size: 1.5em;
+          margin: auto;
+        }
       }
-      &--desc{
-        display: inline-block;
-        font-size: 1em;
-        padding: 1rem;
-        margin-bottom: 0.5rem;
-        font-style: italic;
-        width: 90%;
-      
-              
+      &__content {
+        width: 100%;
+        height: 55%;
+
+        &--title {
+          width: 60%;
+          text-align: center;
+          font-family: 'Allura', sans-serif;
+          font-size: 4em;
+          margin: 0 auto 2rem;
+        }
+
+        &--desc {
+          text-align: center;
+          margin: 0 4em;
+          font-size: 1.3em;
+        }
+
+        &--descItalic {
+          font-style: italic;
+          font-size: 1.1em;
+          margin: 2em 6em;
+        }
       }
-    }
-}    
+      &__tech {
+        width: 100%;
+        height: 25%;
 
 
-
-     
-
+        &--title {
+          color: #DF966D;
+          font-size: 2em;
+          margin-bottom: 1em;
+        }
     // div center            
     .show__center {
       width: 20%;
@@ -623,5 +668,7 @@
       }
     }
   
+  }
+}
 
-
+}
