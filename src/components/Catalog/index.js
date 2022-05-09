@@ -1,9 +1,9 @@
+import { NavLink } from 'react-router-dom';
 // == Import : local
 // Data
 import catalogData from './CatalogData';
 // Style
 import './catalog.scss';
-import { NavLink } from 'react-router-dom';
 
 // == Composant
 function Catalog() {
@@ -22,11 +22,9 @@ function Catalog() {
       <ul className="containers">
         {catalogData.map((show) => (
           <li className="container" key={show.id}>
-            <a href="">
+            <NavLink to="spectacle">
               <div className="catalog__show-poster">
-                <NavLink to="spectacle">
-                  {show.content}
-                </NavLink>
+                {show.content}
               </div>
               <div className="container__overlapse">
                 <div className="container__header">
@@ -38,7 +36,7 @@ function Catalog() {
                 </div>
                 <p className="container__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
               </div>
-            </a>
+            </NavLink>
           </li>
         ))};
       </ul>
