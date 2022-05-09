@@ -11,32 +11,32 @@ function Show() {
       <div className="show__left">
         {/* here the video */}
         <div className="show__left--video">
-          <a href="" className="show__left--video--a">
+          <a href="" className="show__left--video--logo">
             <BsYoutube />
           </a>
         </div>
         {/* age */}
         <div className="show__left--age">
-          <p>de tel a tel age</p>
+          <p>de 2 à 6 ans - 30min</p>
         </div>
         {/* title */}
         <div className="show__left__content">
-          <h2 className="show__left__content--title">Titre</h2>
+          <h2 className="show__left__content--title">Les reprisseuses de l'ouest</h2>
           <p className="show__left__content--desc">Ici sera la description
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptatibus quavelit
             aspernatur temporibus cupiditate harum. Nobis inventore voluptes error dolor quod, ullm
             nisi saepe vero recusandae neque quaerat magni laboriosam vit commodi eaque? Excepturs
             saepe aperiam in labore esse error a vitae suscipit inventore,laceat eos, molestiaeecto.
           </p>
-          <p className="show__left__content--descItalic">Ici sera la description mais en italique !!!!</p>
+          <p className="show__left__content--descItalic">Ici sera la description mais en italique !!!! Ici sera la description mais en italique !!!! Ici sera la description mais en italique !!!! Ici sera la description mais en italique !!!!</p>
         </div>
         {/* technique */}
         <div className="show__left__tech">
           <h3 className="show__left__tech--title">Technique</h3>
           <ul className="show__left__tech--list">
-            <li>petite</li>
-            <li>description</li>
-            <li>technique</li>
+            <li>Espace Scénique : 5m X 4m</li>
+            <li>Adaptable au lieu (intérieur/extérieur)</li>
+            <li>Montage 30 min / démontage 15 min</li>
           </ul>
         </div>
       </div>
@@ -45,12 +45,15 @@ function Show() {
       <div className="show__center">
         {/* name of spectacle */}
         <ul className="show__center--categories">
-          <li>Nom</li>
-          <li>De</li>
-          <li>La</li>
-          <li>Categorie</li>
+          <li className="show__center--categories--li">Différence</li>
+          <li className="show__center--categories--li">Conte</li>
+          <li className="show__center--categories--li">Danse</li>
+          <li className="show__center--categories--li">Musique</li>
         </ul>
-        <a className="show__center--tarif">+ d'infos et tarifs sur demande !</a>
+        <div>
+          <a className="show__center--contact" href="#">Contactez-nous</a>
+          <p className="show__center--subtext">pour plus d'infors et tarifs !</p>
+        </div>
         <img className="show__center--picture" src={image2} alt="1" />
       </div>
 

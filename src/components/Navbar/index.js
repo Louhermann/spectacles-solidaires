@@ -26,11 +26,11 @@ function Navbar() {
 
       {/* menu items */}
       <ul className={hamburgerOpen ? 'ul-open' : 'ul-close'}>
-        <li><NavLink to="/">Accueil</NavLink></li>
-        <li><NavLink to="Catalogue">Catalogue</NavLink></li>
-        <li><NavLink to="Contact">Contact</NavLink></li>
-        <li><NavLink to="Apropos">A propos</NavLink></li>
-        <li>
+        <li className="li"><NavLink to="/">Accueil</NavLink></li>
+        <li className="li"><NavLink to="Catalogue">Catalogue</NavLink></li>
+        <li className="li"><NavLink to="Contact">Contact</NavLink></li>
+        <li className="li"><NavLink to="Apropos">A propos</NavLink></li>
+        <li className="li">
           <NavLink to="Connexion">
             <AiOutlineUser
               size="40px"
