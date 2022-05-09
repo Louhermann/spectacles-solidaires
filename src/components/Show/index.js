@@ -53,8 +53,8 @@ function Show() {
           <li className="show__center--categories--li">Musique</li>
         </ul>
         <div className="show__center__middle">
-          <p className="show__center__middle--subtext">pour plus d'infors et tarifs !</p>
           <a className="show__center__middle--contact" href="#">Contactez-nous</a>
+          <p className="show__center__middle--subtext">pour plus d'infos et tarifs !</p>
         </div>
         <img className="show__center--picture" src={image2} alt="1" />
       </div>
