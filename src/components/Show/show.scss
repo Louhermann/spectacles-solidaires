@@ -1,10 +1,14 @@
+@media screen and (min-width: 319px) {
+    .show{
+  
 
+  //div left
 
-//div left
-.show{
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 95%;
-  height: 90vh;
+  height: auto;
   background-color: antiquewhite;
   margin: 1em auto;
   position: relative;
@@ -27,7 +31,7 @@
       
       
       
-      &--a {
+      &--logo {
         position: absolute;
         top: -30px;
         left: -30px;
@@ -38,11 +42,7 @@
       }
     }
 
-    // &--age {
-    // }
-
   }
-
 
   // div center
   
@@ -60,39 +60,102 @@
       border-radius: 2em;
     }
   }
-//div right
+  //div right
+
+    &__right{
+
+      width: 100%;
+     
+    
+    
+      &--back{
+    
+      right: 0;
+      background-color: white;
+      width: 70%;
+      height: auto;
+      margin: 2rem auto;
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    }
+      &--picture{
+        width: 80%;
+        height: auto;
+        margin: 1.5rem auto 0;
+      
+      }
+      &--desc{
+        display: inline-block;
+        font-size: 1em;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        // border: 2px solid black;
+        font-style: italic;
+        width: 90%;
+      
+              
+      }
+    }
+}
+}
+  @media screen and (min-width: 767px) {
+  //div right
+  .show{
+    flex-direction: row;
 
   &__right{
 
     width: 40%;
-   
-   
+    
+
     &--back{
-     background-color: white;
-     width: 70%;
-     height: auto;
-     margin: 5rem ;
-     transform: rotate(5deg);
-     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-   }
+    transform: rotate(5deg);
+    
+  }
     &--picture{
       width: 80%;
       height: auto;
       margin: 1.5rem auto 0;
-     
+    
     }
     &--desc{
-      display: inline-block;
-      font-size: 2rem;
-      padding: 1rem;
-      margin-bottom: 0.5rem;
-      // border: 2px solid black;
-      font-style: italic;
-      width: 90%;
-     
-            
+      font-size: 2em;
+      
     }
   }
-}
+  }
 
+  }
 
+// &__right{
+
+//   width: 40%;
+ 
+ 
+//   &--back{
+
+//   background-color: white;
+//   width: 70%;
+//   height: auto;
+//   margin: 5rem ;
+//   transform: rotate(5deg);
+//   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+//  }
+//   &--picture{
+//     width: 80%;
+//     height: auto;
+//     margin: 1.5rem auto 0;
+   
+//   }
+//   &--desc{
+//     display: inline-block;
+//     font-size: 2rem;
+//     padding: 1rem;
+//     margin-bottom: 0.5rem;
+//     // border: 2px solid black;
+//     font-style: italic;
+//     width: 90%;
+   
+          
+//   }
+// }
+// }

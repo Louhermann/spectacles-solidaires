@@ -11,7 +11,7 @@ function Show() {
       <div className="show__left">
         {/* here the video */}
         <div className="show__left--video">
-          <a href="" className="show__left--video--a">
+          <a href="" className="show__left--video--logo">
             <BsYoutube />
           </a>
         </div>
