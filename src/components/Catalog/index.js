@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 // == Import : local
 // Data
-import { NavLink } from 'react-router-dom';
 import catalogData from './CatalogData';
 // Style
 import './catalog.scss';

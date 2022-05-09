@@ -10,14 +10,16 @@ function Show() {
       {/* div left */}
       <div className="show__left">
         {/* here the video */}
-        <div className="show__left--video">
-          <a href="" className="show__left--video--logo">
-            <BsYoutube />
-          </a>
-        </div>
-        {/* age */}
-        <div className="show__left--age">
-          <p>de 2 à 6 ans - 30min</p>
+        <div className="show__left--container">
+          <div className="show__left--video">
+            <a href="" className="show__left--video--logo">
+              <BsYoutube />
+            </a>
+          </div>
+          {/* age */}
+          <div className="show__left--age">
+            <p>de 2 à 6 ans - 30min</p>
+          </div>
         </div>
         {/* title */}
         <div className="show__left__content">
