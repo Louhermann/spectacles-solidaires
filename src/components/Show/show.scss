@@ -40,7 +40,7 @@
         }
           &--age {
             position: absolute;
-            right: 10%;
+            right: 6%;
             background-color: white;
             width: 60%;
             transform: rotate(-5deg);
@@ -240,7 +240,7 @@
 @media (min-width: 767px) {
   
   .show{
-
+    margin-top: 2em;
     flex-direction: row;
     &__left{
         width: 45%;
@@ -367,7 +367,6 @@
 @media screen and (min-width: 1023px) {
   .show {
     position: relative;
-    height: 90vh;
     &__left {
     
       &__container{
@@ -493,18 +492,17 @@
 @media screen and (min-width: 1439px){
 
 .show{
-  height: 100vh;
   padding: 1rem;
   
   &__left{
     &__content {
       &--title { 
-        font-size: 5em;
+        font-size: 3em;
       }
 
       &--desc {
        
-        font-size: 1.5em;
+        font-size: 1.3em;
       }
 
       &--descItalic { 
@@ -535,9 +533,35 @@
  }
  
   &__right {
-    margin: 8rem auto;
+    margin: 6rem auto;
+
+    &--back {
+      height: 100%;
+    }
+
+    &--picture {
+      height: 85%;
+    }
   }
 }
 
 
+}
+
+
+@media screen and (min-width: 1680px){
+  .show {
+  &__right {
+    margin: 2rem auto;
+
+    &--back {
+      height: 100%;
+    }
+
+    &--picture {
+      height: 85%;
+    }
+  }
+  
+}
 }

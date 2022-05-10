@@ -41,7 +41,7 @@ const catalogData = [
   {
     id: 6,
     name: 'Les mains baradeuses',
-    content: <img src={image6} className="images" alt="6" />,
+    content: <img src={image6} className="catalog-images" alt="6" />,
   },
   {
     id: 7,
@@ -51,7 +51,7 @@ const catalogData = [
   {
     id: 8,
     name: 'Nekolo',
-    content: <img src={image8} className="images" alt="8" />,
+    content: <img src={image8} className="catalog-images" alt="8" />,
   },
   {
     id: 9,
