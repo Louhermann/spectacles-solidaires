@@ -15,6 +15,7 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="app">
+
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,6 +27,7 @@ function App() {
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
+
     </div>
   );
 }

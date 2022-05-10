@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 // == Import : local
 // Data
 import catalogData from './CatalogData';
+
 // Style
 import './catalog.scss';
 
