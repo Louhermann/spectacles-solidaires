@@ -8,18 +8,19 @@ function Home() {
   return (
     <>
       <div className="home">
-        <h1 className="home__title ">Description du site</h1>
+        {/* <h1 className="home__title ">Description du site</h1> */}
         <p className="home__text">
-          " It is a long established fact that a reader will be distracted by the readable
-          content of a page when looking at its layout.
-          The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-          of letters, as opposed to using 'Content here,
-          content here', making it look like readable English. Many desktop publishing
-          packages and web page editors now use Lorem Ipsum
-          as their default model text, and a search for 'lorem ipsum' will uncover many
-          web sites still in their infancy. Various versions
-          have evolved over the years, sometimes by accident, sometimes on purpose
-          (injected humour and the like). "
+          Tous les ans, de nombreux organismes publics et privés organisent des temps culturels pour
+          faire découvrir des spectacles vivants à un public qui peut être large, ciblé ou privé.
+        </p>
+        <p className="home__text">
+          La vocation de spectacles solidaire part d'un constat : comme dans beaucoup de secteurs,
+          certains publics sont privilégiés par rapport à d'autres.
+          Les budgets, très différents, créént de l’inégalité entre les publics.
+        </p>
+        <p className="home__text">
+          La mission des spectacles solidaires est de développer l’accès
+          à la culture auprès de tous, qu’ils puissent la partager et s’entraider.
         </p>
 
       </div>
