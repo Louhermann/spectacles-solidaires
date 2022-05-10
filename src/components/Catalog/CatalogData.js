@@ -16,27 +16,27 @@ const catalogData = [
   {
     id: 1,
     name: 'Artichocolat',
-    content: <img src={image1} className="images" alt="1" />,
+    content: <img src={image1} className="catalog-images" alt="1" />,
   },
   {
     id: 2,
     name: 'La note magique',
-    content: <img src={image2} className="images" alt="2" />,
+    content: <img src={image2} className="catalog-images" alt="2" />,
   },
   {
     id: 3,
     name: 'Le murmure de la mer',
-    content: <img src={image3} className="images" alt="3" />,
+    content: <img src={image3} className="catalog-images" alt="3" />,
   },
   {
     id: 4,
     name: 'Les défis et énigmes',
-    content: <img src={image4} className="images" alt="4" />,
+    content: <img src={image4} className="catalog-images" alt="4" />,
   },
   {
     id: 5,
     name: 'Les expériences spectaculaires',
-    content: <img src={image5} className="images" alt="5" />,
+    content: <img src={image5} className="catalog-images" alt="5" />,
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const catalogData = [
   {
     id: 7,
     name: 'Badou',
-    content: <img src={image7} className="images" alt="7" />,
+    content: <img src={image7} className="catalog-images" alt="7" />,
   },
   {
     id: 8,
@@ -56,22 +56,22 @@ const catalogData = [
   {
     id: 9,
     name: 'Petite ombre',
-    content: <img src={image9} className="images" alt="9" />,
+    content: <img src={image9} className="catalog-images" alt="9" />,
   },
   {
     id: 10,
     name: 'Sur le port de Chine',
-    content: <img src={image10} className="images" alt="10" />,
+    content: <img src={image10} className="catalog-images" alt="10" />,
   },
   {
     id: 11,
     name: 'Aliko',
-    content: <img src={image11} className="images" alt="11" />,
+    content: <img src={image11} className="catalog-images" alt="11" />,
   },
   {
     id: 12,
     name: 'Les repriseuses de l\'ouest',
-    content: <img src={image12} className="images" alt="12" />,
+    content: <img src={image12} className="catalog-images" alt="12" />,
   },
 ];
 
