@@ -24,26 +24,26 @@ function Navbar() {
         <Hamburger />
       </div>
       <nav className={hamburgerOpen ? 'nav-open' : 'nav-close'}>
-      {/* menu items */}
-      <ul className={hamburgerOpen ? 'ul ul-open' : 'ul ul-close'}>
-        <li className='li'><NavLink className="list-item" data-item="Accueil" to="/">Accueil</NavLink></li>
-        <li className='li'><NavLink className="list-item" data-item="Catalogue" to="Catalogue">Catalogue</NavLink></li>
-        <li className='li'><NavLink className="list-item" data-item="Contact" to="Contact">Contact</NavLink></li>
-        <li className='li'><NavLink className="list-item" data-item="A propos" to="Apropos">À propos</NavLink></li>
-        <li className=' li login-item'>
-          <NavLink className="list-item" data-item="" to="Connexion">
-            <AiOutlineUser
-              size="40px"
-              title="se connecter"
-              display="flex"
-              text-align="-webkit-center"
-              className='icon'
-            />
-            Se connecter
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+        {/* menu items */}
+        <ul className={hamburgerOpen ? 'ul ul-open' : 'ul ul-close'}>
+          <li className="li"><NavLink className="list-item" data-item="Accueil" to="/">Accueil</NavLink></li>
+          <li className="li"><NavLink className="list-item" data-item="Catalogue" to="Catalogue">Catalogue</NavLink></li>
+          <li className="li"><NavLink className="list-item" data-item="Contact" to="Contact">Contact</NavLink></li>
+          <li className="li"><NavLink className="list-item" data-item="A propos" to="Apropos">À propos</NavLink></li>
+          <li className=" li login-item">
+            <NavLink className="list-item" data-item="" to="Connexion">
+              <AiOutlineUser
+                size="40px"
+                title="se connecter"
+                display="flex"
+                text-align="-webkit-center"
+                className="icon"
+              />
+              Se connecter
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }
