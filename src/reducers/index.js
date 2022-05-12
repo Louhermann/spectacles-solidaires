@@ -1,4 +1,4 @@
-import { SET_SIGN_IN, SET_SIGN_UP } from '../actions';
+import { SET_SIGN_IN, SET_SIGN_UP, SAVE_EVENT } from '../actions';
 
 const initialState = {
 
@@ -12,6 +12,8 @@ const initialState = {
     email: '',
     password: '',
   },
+
+  show: [],
 };
 
 function mainReducers(state = initialState, action = {}) {
@@ -31,6 +33,11 @@ function mainReducers(state = initialState, action = {}) {
           ...state.signIn,
           [action.name]: action.value,
         },
+      };
+    case SAVE_EVENT:
+      return {
+        ...state,
+        show: action.event,
       };
     default:
       return state;

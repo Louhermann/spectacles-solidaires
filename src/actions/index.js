@@ -17,3 +17,21 @@ export const setSignIn = (value, name) => ({
   value,
   name,
 });
+
+// action saveData
+export const SAVE_DATA = 'SAVE_DATA';
+
+// Action creator saveData
+export const saveData = (data) => ({
+  type: SAVE_DATA,
+  data,
+});
+
+// action saveEvent
+export const SAVE_EVENT = 'SAVE_EVENT';
+
+// Action creator saveEvent
+export const saveEvent = (event) => ({
+  type: SAVE_EVENT,
+  event,
+});
