@@ -47,6 +47,10 @@
      display: flex;
   }
 
+  .active {
+    color: black;
+  }
+
 // >>>>>>> mergeComponent
   .list-item:hover {
     color: black;
