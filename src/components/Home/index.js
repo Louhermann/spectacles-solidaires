@@ -1,6 +1,6 @@
 // Import styles
 import './home.scss';
-// import Slider from 'src/components/Slider';
+import Slider from 'src/components/Slider';
 
 // == Img
 
@@ -25,7 +25,7 @@ function Home() {
 
       </div>
       <div>
-        {/* <Slider /> */}
+        <Slider />
       </div>
     </>
   );

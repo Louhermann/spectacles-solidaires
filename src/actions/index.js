@@ -35,3 +35,12 @@ export const saveEvent = (event) => ({
   type: SAVE_EVENT,
   event,
 });
+
+// ACTION TYPE
+export const SET_GO_TO_SLIDE = 'SET_GO_TO_SLIDE';
+
+// ACTION CREATOR
+export const setGoToSlide = (index) => ({
+  type: SET_GO_TO_SLIDE,
+  index,
+});

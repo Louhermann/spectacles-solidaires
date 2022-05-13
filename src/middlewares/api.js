@@ -19,7 +19,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .then((response) => {
           store.dispatch(saveEvent(response.data.events));
-          console.log(response.data.events);
+          // console.log(response.data.events);
         })
         .catch(
           (response) => {

@@ -1,8 +1,8 @@
 // == Import
 import './show.scss';
 import { BsYoutube } from 'react-icons/bs';
-import image1 from '../../assets/images/Artichocolat/Artichocolat.jpg';
-import image2 from '../../assets/images/Artichocolat/Artichocolat_mini.jpg';
+// import image1 from '../../assets/images/Artichocolat/Artichocolat.jpg';
+// import image2 from '../../assets/images/Artichocolat/Artichocolat_mini.jpg';
 // == Composant
 function Show() {
   return (
