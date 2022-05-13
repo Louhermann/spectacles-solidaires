@@ -1,10 +1,22 @@
 // == Import
 import './show.scss';
 import { BsYoutube } from 'react-icons/bs';
-// import image1 from '../../assets/images/Artichocolat/Artichocolat.jpg';
-// import image2 from '../../assets/images/Artichocolat/Artichocolat_mini.jpg';
+import { Navigate, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+
+
 // == Composant
 function Show() {
+  const events = useSelector((state) => state.events);
+  console.log(events);
+
+  const { slug } = useParams();
+  console.log({slug});
+
+
+  const show = useSelector((state) => findShow(events, slug));
+
   return (
     <div className="show">
       {/* div left */}
@@ -18,7 +30,7 @@ function Show() {
           </div>
           {/* age */}
           <div className="show__left__container--age">
-            <p className="show__left__container--age--text">de 2 à 6 ans - 30min</p>
+            <p className="show__left__container--age--text">{events.age}</p>
           </div>
         </div>
         {/* title */}
@@ -56,13 +68,13 @@ function Show() {
           <a className="show__center__middle--contact" href="#">Contactez-nous</a>
           <p className="show__center__middle--subtext">pour plus d'infos et tarifs !</p>
         </div>
-        <img className="show__center--picture" src={image2} alt="1" />
+        {/* <img className="show__center--picture" src={image2} alt="1" /> */}
       </div>
 
       {/* div right */}
       <div className="show__right">
         <div className="show__right--back">
-          <img className="show__right--picture" src={image1} alt="2" />
+          {/* <img className="show__right--picture" src={image1} alt="2" /> */}
           <p className="show__right--desc">
             + atelier enfant 1h
           </p>
@@ -73,5 +85,7 @@ function Show() {
   );
 }
 
+
 // == Export
 export default Show;
+

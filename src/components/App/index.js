@@ -15,12 +15,15 @@ import Connexion from 'src/components/Connexion';
 import Show from 'src/components/Show';
 
 import { saveData } from '../../actions';
+import { useSelector } from 'react-redux';
+
 
 // Style
 import './styles.scss';
 
 function App() {
   const dispatch = useDispatch();
+  const events = useSelector((state) => state.events);
 
   useEffect(
     () => {
@@ -37,7 +40,9 @@ function App() {
         <Route path="Apropos" element={<About />} />
         <Route path="Contact" element={<Contact />} />
         <Route path="Catalogue" element={<Catalog />} />
-        <Route path="Catalogue/spectacle" element={<Show />} />
+        {events.map((event) => (
+        <Route path={`Catalogue/spectacle/:slug`}  element={<Show key={events.id} />} />
+        ))};
         <Route path="Connexion" element={<Connexion />} />
         <Route path="*" element={<Error404 />} />
       </Routes>

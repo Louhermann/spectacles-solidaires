@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 // == Import : local
 // Data
@@ -9,13 +10,16 @@ import './catalog.scss';
 // == Composant
 function Catalog() {
   const events = useSelector((state) => state.events);
+  console.log(events);
+
+  const { slug } = useParams();
 
   return (
     <div className="catalog">
       <ul className="containers">
         {events.map((event) => (
           <li className="container" key={event.id}>
-            <NavLink to="spectacle">
+            <NavLink to={`/spectacle/ ${event.id}`}>
               <div className="catalog__show-poster">
                 <img className="catalog-images" src={event.picture_2} alt={`Poster ${event.title}`} />
               </div>
