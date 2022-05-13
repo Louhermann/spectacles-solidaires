@@ -22,10 +22,11 @@ import './styles.scss';
 function App() {
   const dispatch = useDispatch();
 
-  useEffect( () => {
-    dispatch(saveData());
-  },
-  [],
+  useEffect(
+    () => {
+      dispatch(saveData());
+    },
+    [],
   );
 
   return (
