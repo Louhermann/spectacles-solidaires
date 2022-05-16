@@ -1,16 +1,22 @@
-import { SET_SIGN_IN, SET_SIGN_UP, SAVE_EVENT, SET_GO_TO_SLIDE } from '../actions';
+import {
+  SET_SIGN_IN,
+  SET_SIGN_UP,
+  SAVE_EVENT,
+  SET_GO_TO_SLIDE,
+  SAVE_TOKEN,
+} from '../actions';
 
 const initialState = {
 
   signIn: {
-    email: '',
+    username: '',
     password: '',
-    lastName: '',
   },
 
   signUp: {
     email: '',
     password: '',
+    lastName: '',
   },
 
   slider: {
@@ -51,6 +57,11 @@ function mainReducers(state = initialState, action = {}) {
           ...state.slider,
           goToSlide: action.index,
         },
+      };
+    case SAVE_TOKEN:
+      return {
+        ...state,
+        token: action.token,
       };
     default:
       return state;

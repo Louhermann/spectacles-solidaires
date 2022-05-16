@@ -44,3 +44,20 @@ export const setGoToSlide = (index) => ({
   type: SET_GO_TO_SLIDE,
   index,
 });
+
+// ACTION TYPE LOGIN
+export const LOGIN = 'LOGIN';
+
+// ACTION CREATOR login
+export const login = () => ({
+  type: LOGIN,
+});
+
+// ACTION TYPE SAVE_TOKEN
+export const SAVE_TOKEN = 'SAVE_TOKEN';
+
+// ACTION CREATOR save_token
+export const saveToken = (token) => ({
+  type: SAVE_TOKEN,
+  token,
+});

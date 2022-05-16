@@ -39,7 +39,7 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="Catalogue" element={<Catalog />} />
         {events.map((event) => (
-          <Route path={`Catalogue/spectacle/${':slug'}`} key={event.id} element={<Show key={event.title} />} />
+          <Route path="Catalogue/spectacle/:slug" key={event.id} element={<Show key={event.title} />} />
         ))};
         <Route path="Connexion" element={<Connexion />} />
         <Route path="*" element={<Error404 />} />
