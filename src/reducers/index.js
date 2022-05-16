@@ -5,14 +5,15 @@ import {
   SET_GO_TO_SLIDE,
   SAVE_TOKEN,
   IS_LOGGED,
+  LOG_OUT,
 } from '../actions';
 
 const initialState = {
-  isLogged: false,
+  isLogged: true,
 
   signIn: {
-    username: '',
-    password: '',
+    username: 'admin@admin.com',
+    password: 'admin',
   },
 
   signUp: {
@@ -66,6 +67,11 @@ function mainReducers(state = initialState, action = {}) {
         token: action.token,
       };
     case IS_LOGGED:
+      return {
+        ...state,
+        isLogged: action.bool,
+      };
+    case LOG_OUT:
       return {
         ...state,
         isLogged: action.bool,

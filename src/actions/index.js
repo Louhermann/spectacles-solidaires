@@ -70,3 +70,12 @@ export const isLogged = (bool) => ({
   type: IS_LOGGED,
   bool,
 });
+
+// ACTION TYPE LOG_OUT
+export const LOG_OUT = 'LOG_OUT';
+
+// ACTION CREATOR logOut
+export const logOut = (bool) => ({
+  type: LOG_OUT,
+  bool,
+});
