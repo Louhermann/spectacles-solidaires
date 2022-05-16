@@ -225,12 +225,10 @@
 
       &--desc {
         display: inline-block;
-        font-size: 1em;
-        padding: 1rem;
         margin-bottom: 0.5rem;
         font-style: italic;
         width: 90%;
-
+        font-size: 0.7em;
 
       }
     }
@@ -317,11 +315,12 @@
      }
     
     &__middle{
-      bottom: 0;
-      left: -40px;
+      bottom: 140px;
+      left: -70px;
       position: absolute;
     
       &--contact {
+        width: 10em;
         font-size: .8rem;
         margin: 1rem auto 0;
         font-weight: bold;
@@ -359,6 +358,9 @@
       }
       &--picture{
         width: 90%;
+      }
+      &--desc{
+        font-size: 0.8em
       }
     }
   }
@@ -439,7 +441,7 @@
         bottom: 40%;
         
       &--contact {
-        
+        width: 15em;
         top: 14em;
         font-size: .8rem;
         margin: 50px auto 0;
@@ -448,7 +450,7 @@
       &--subtext {
         top: 12em;
         font-size: 1.2em;
-      margin-top: 1em;
+        margin-top: 1em;
     }
     
   }
@@ -469,21 +471,15 @@
 
       top: 45%; 
       width:100%;
-
     }
 
     &--picture {
       height: auto;
       margin: 1.5rem auto 0;
-
     }
 
     &--desc {
-
-      font-size: 2rem;
-
-
-
+      font-size: 1rem;
     }
   }
 }
@@ -551,6 +547,18 @@
 
 @media screen and (min-width: 1680px){
   .show {
+
+    &__center {
+      
+      &__middle {
+        left: 20px
+      }
+
+    &__middle--contact {
+      width: 20em;
+    }
+    }
+
   &__right {
     margin: 2rem auto;
 
@@ -560,6 +568,10 @@
 
     &--picture {
       height: 85%;
+    }
+
+    &--desc {
+      font-size: 1.3em;
     }
   }
   

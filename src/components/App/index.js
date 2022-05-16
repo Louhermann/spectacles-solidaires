@@ -1,6 +1,6 @@
 // == Import
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
 // == Composant
@@ -15,8 +15,6 @@ import Connexion from 'src/components/Connexion';
 import Show from 'src/components/Show';
 
 import { saveData } from '../../actions';
-import { useSelector } from 'react-redux';
-
 
 // Style
 import './styles.scss';
@@ -41,7 +39,7 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="Catalogue" element={<Catalog />} />
         {events.map((event) => (
-        <Route path={`Catalogue/spectacle/:slug`}  element={<Show key={events.id} />} />
+          <Route path={`Catalogue/spectacle/${':slug'}`} key={event.id} element={<Show key={event.title} />} />
         ))};
         <Route path="Connexion" element={<Connexion />} />
         <Route path="*" element={<Error404 />} />

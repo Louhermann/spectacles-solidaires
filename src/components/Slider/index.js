@@ -11,7 +11,6 @@ import './slider.scss';
 
 function Slider() {
   const dispatch = useDispatch();
-
   const isTrue = true;
   const events = useSelector((state) => state.events);
   const goToSlide = useSelector((state) => state.slider.goToSlide);
