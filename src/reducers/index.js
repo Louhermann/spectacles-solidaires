@@ -4,9 +4,11 @@ import {
   SAVE_EVENT,
   SET_GO_TO_SLIDE,
   SAVE_TOKEN,
+  IS_LOGGED,
 } from '../actions';
 
 const initialState = {
+  isLogged: false,
 
   signIn: {
     username: '',
@@ -63,9 +65,13 @@ function mainReducers(state = initialState, action = {}) {
         ...state,
         token: action.token,
       };
+    case IS_LOGGED:
+      return {
+        ...state,
+        isLogged: action.bool,
+      };
     default:
       return state;
   }
 }
-
 export default mainReducers;

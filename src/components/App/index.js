@@ -22,7 +22,7 @@ import './styles.scss';
 function App() {
   const dispatch = useDispatch();
   const events = useSelector((state) => state.events);
-
+  // const isLogged = useSelector((state) => state.isLogged);
   useEffect(
     () => {
       dispatch(saveData());
@@ -41,8 +41,8 @@ function App() {
         {events.map((event) => (
           <Route path="Catalogue/spectacle/:slug" key={event.id} element={<Show key={event.title} />} />
         ))};
-        <Route path="Connexion" element={<Connexion />} />
         <Route path="*" element={<Error404 />} />
+        <Route path="Connexion" element={<Connexion />} />
       </Routes>
       <Footer />
     </div>

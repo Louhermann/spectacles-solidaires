@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { AiOutlineUser } from 'react-icons/ai';
 import './navbar.scss';
 import { NavLink } from 'react-router-dom';
+// const isLogged = useSelector((state) => state.isLogged);
 
 // == Composant
 function Navbar() {
@@ -39,7 +40,7 @@ function Navbar() {
                 text-align="-webkit-center"
                 className="icon"
               />
-              Se connecter
+              {/* { !isLogged ?  'Se connecter' : 'Se deconnecter'} */}
             </NavLink>
           </li>
         </ul>

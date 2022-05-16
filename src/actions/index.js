@@ -61,3 +61,12 @@ export const saveToken = (token) => ({
   type: SAVE_TOKEN,
   token,
 });
+
+// ACTION TYPE IS_LOGGED
+export const IS_LOGGED = 'IS_LOGGED';
+
+// ACTION CREATOR isLogged
+export const isLogged = (bool) => ({
+  type: IS_LOGGED,
+  bool,
+});
