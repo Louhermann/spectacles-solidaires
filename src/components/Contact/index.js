@@ -1,12 +1,11 @@
 // styles
 import './contact.scss';
 
-import { contact } from '../../actions';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { setContact, contact } from '../../actions';
 
 function Contact() {
-
   const valueContactName = useSelector((state) => state.contact.name);
   const valueContactSurname = useSelector((state) => state.contact.surname);
   const valueContactEmail = useSelector((state) => state.contact.email);
@@ -17,33 +16,9 @@ function Contact() {
 
   const dispatch = useDispatch();
 
-  const onNameChange = (event) => {
-    dispatch(contact({name: event.target.value}));
+  const onChange = (event) => {
+    dispatch(setContact(event.target.value, event.target.name));
     console.log('change');
-  };
-
-  const onSurnameChange = (event) => {
-    dispatch(contact({surname: event.target.value}));
-  };
-
-  const onEmailChange = (event) => {
-    dispatch(contact({email: event.target.value}));
-  };
-
-   const onPhoneChange  = (event) => {
-    dispatch(contact({phone: event.target.value}));
-  };
-
-  const onPublicChange  = (event) => {
-    dispatch(contact({public: event.target.value}));
-  };
-
- const onBudgetChange = (event) => {
-  dispatch(contact({budget: event.target.value}));
-  };
-
-   const onMessageChange  = (event) => {
-    dispatch(contact({message: event.target.value}));
   };
 
   const handleSubmit = (event) => {
@@ -52,7 +27,6 @@ function Contact() {
     console.log('submit');
   };
 
-
   return (
     <form className="card" onSubmit={handleSubmit} method="POST">
       <h2 className="card__title">Contactez nous</h2>
@@ -60,49 +34,49 @@ function Contact() {
         <div className="card__col">
           <div className="card__form">
             <label className="card__label">Prenom</label>
-            <input className="card__input" name="prenom" type="text" value={valueContactName} onChange={onNameChange} />
+            <input className="card__input" name="name" type="text" value={valueContactName} onChange={onChange} />
           </div>
         </div>
 
         <div className="card__col">
           <div className="card__form">
             <label className="card__label">Nom</label>
-            <input className="card__input" name="nom" type="text" value={valueContactSurname} onChange={onSurnameChange}/>
+            <input className="card__input" name="surname" type="text" value={valueContactSurname} onChange={onChange} />
           </div>
         </div>
 
         <div className="card__col">
           <div className="card__form">
             <label className="card__label">E-mail</label>
-            <input className="card__input" name="mail" type="text" value={valueContactEmail} onChange={onEmailChange}/>
+            <input className="card__input" name="email" type="text" value={valueContactEmail} onChange={onChange} />
           </div>
         </div>
 
         <div className="card__col">
           <div className="card__form">
             <label className="card__label">Téléphone</label>
-            <input className="card__input" type="tel" name="telephone" value={valueContactPhone} onChange={onPhoneChange} />
+            <input className="card__input" type="phone" name="phone" value={valueContactPhone} onChange={onChange} />
           </div>
         </div>
 
         <div className="card__col">
           <div className="card__form">
             <label className="card__label">Public</label>
-            <input className="card__input" type="text" name="age" value={valueContactPublic} onChange={onPublicChange}/>
+            <input className="card__input" type="text" name="public" value={valueContactPublic} onChange={onChange} />
           </div>
         </div>
 
         <div className="card__col">
           <div className="card__form">
             <label className="card__label">Budget</label>
-            <input className="card__input" type="text" name="prix" value={valueContactBudget} onChange={onBudgetChange}/>
+            <input className="card__input" type="text" name="budget" value={valueContactBudget} onChange={onChange} />
           </div>
         </div>
 
         <div className="card__col">
           <div className="card__form">
             <label className="card__label">Message</label>
-            <textarea className="card__textarea" type="text" name="message" value={valueContactMessage} onChange={onMessageChange}/>
+            <textarea className="card__textarea" type="text" name="message" value={valueContactMessage} onChange={onChange} />
           </div>
         </div>
 

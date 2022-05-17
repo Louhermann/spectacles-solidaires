@@ -6,7 +6,7 @@ import {
   SAVE_TOKEN,
   IS_LOGGED,
   LOG_OUT,
-  CONTACT,
+  SET_CONTACT,
 } from '../actions';
 
 const initialState = {
@@ -26,7 +26,7 @@ const initialState = {
   slider: {
     goToSlide: 0,
   },
-  
+
   contact: {
     name: '',
     surname: '',
@@ -34,13 +34,12 @@ const initialState = {
     phone: '',
     public: '',
     budget: '',
-    message: ''
+    message: '',
   },
 
   events: [],
-  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI2ODU3NzAsImV4cCI6MTY1Mjc1MDU3MCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSJ9.W1nv1aLZUx7t6D6wDuy9niFRPrDK99ezFxP3x2ecpMgIqOpV8bF9XOpaPAxZ5AvXh6oDULHaD9yKm3sGoRbDsLdiP3qP__s9iwZmFCnPGPUb10YG1koi4ghoW5vgMsy_IB1aEswARg37Z6Wdb9-VNogb_IN6kp8RtfDPXMBPKCNt-hPECD0fX5jTgYx1vSDVTO3LasXA5LUfsLI3olpJI4dKvYp7BOI8E8g8lZaulQGrQxp8Ug6w522PGXO0-bK5Bs0rmi6b3ST_uNiGhpNT_6GeHNBcSU9ZtazoPb6lcjjLCMKkAPVD96M-PJnGK53kgca_r4HYbkkjFiWQUMTAWQ',
+  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI3NzE3MTYsImV4cCI6MTY1MjgzNjUxNiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSJ9.ctbPkNczURb-oSDH1LOkp-qlDd4tyUm3ga5grh6bvo-kofxyK9LE3IEX6AheaF2m4sRKhBn7W7rG_ekdJYZ4PkuQw5rQDhYeIus11DZ1PqMvbSssSVwShajWhx8hWo9k32AS_gSlPX24B0VWycIUTz5g9-EzeaC-szfqY5kPPj06odrJ-HmZ2kJWWiYxTGuiFEofMmdMq3SgXvguZImOEWaqspX2gGBOW53XLomB3Rej1wW_kzNZTklRowL5m9ip82GnxWouhKQ8zsQ1m-yN3erXPvK1TAGcrlLq_Xk5QvA-J8QpgrD2on5DMqnm7FnVvFOjkPr3WzhfDe5eQ3p4EQ',
 };
-
 
 function mainReducers(state = initialState, action = {}) {
   switch (action.type) {
@@ -60,14 +59,15 @@ function mainReducers(state = initialState, action = {}) {
           [action.name]: action.value,
         },
       };
-      case CONTACT:
-        return {
-          ...state,
-          contact: {
-            ...state.contact,
-            [action.name]: action.value,
-          },
-        };
+    case SET_CONTACT:
+      return {
+        ...state,
+        contact: {
+          ...state.contact,
+          [action.name]: action.value,
+        },
+      };
+
     case SAVE_EVENT:
       return {
         ...state,
