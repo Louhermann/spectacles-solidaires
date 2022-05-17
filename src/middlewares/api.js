@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import axios from 'axios';
 import {
   SAVE_DATA,
@@ -63,31 +64,14 @@ const apiMiddleWare = (store) => (next) => (action) => {
     }
 
     case CONTACT: {
-      axiosInstance
-      .post(
-        {
-          // name,
-          // surname,
-          // email,
-          // phone, 
-          // public,
-          // budget,
-          // message,
-        },
-        )
-      .then((response)=>{
-        if (response.data.status === 'success') {
-          alert("Message Sent.");
-        } else if(response.data.status === 'fail') {
-          alert("Message failed to send.")
-        }
-      })
-      .catch((err) => {
-        console.log('oups...');
-      });
+      emailjs.sendForm('service_v5agd3h', 'template_svj2zrl', '#contact', 'V7f8HPedeyRo5IJ-4')
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        }, (error) => {
+          console.log('FAILED...', error);
+        });
       next(action);
       break;
-    
     }
     default:
       next(action);

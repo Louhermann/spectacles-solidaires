@@ -28,7 +28,7 @@ function Contact() {
   };
 
   return (
-    <form className="card" onSubmit={handleSubmit} method="POST">
+    <form id="contact" className="card" onSubmit={handleSubmit} method="POST">
       <h2 className="card__title">Contactez nous</h2>
       <div className="card__row">
         <div className="card__col">
