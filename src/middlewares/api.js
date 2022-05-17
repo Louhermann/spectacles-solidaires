@@ -1,14 +1,17 @@
 import axios from 'axios';
+
 import {
   SAVE_DATA,
   saveEvent,
   LOGIN,
-  // isLogged,
+  isLogged,
+  saveToken,
 } from '../actions';
 
 const axiosInstance = axios.create({
   baseURL: 'http://al1santa-server.eddi.cloud/projet-14-spectacles-solidaires-back/public/api/',
 });
+// const dispatch = useDispatch();
 
 const apiMiddleWare = (store) => (next) => (action) => {
   const { token } = store.getState();
@@ -50,9 +53,11 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .then((response) => {
           console.log(response);
-          store.dispatch(response.data.token);
-          // .dispatch(isLogged(true));
+          store.dispatch(saveToken(response.data.token));
+          store.dispatch(isLogged(true));
         })
+        // .then((response) => {
+        // })
         .catch((err) => {
           console.log('oups...');
           console.log(err);

@@ -8,9 +8,9 @@ import { setSignIn, setSignUp, login } from '../../actions';
 // == Composant
 function Connexion() {
   // const isLogged = useSelector((state) => state.isLogged);
-  // // if (isLogged) {
-  // //   return null;
-  // // }
+  // if (isLogged) {
+  //   return <Redirect to="/" />;
+  // }
   // console.log(isLogged);
   const [isActive, setActive] = useState(false);
 

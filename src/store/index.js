@@ -1,10 +1,11 @@
 import { legacy_createStore as createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 
 import reducer from 'src/reducers';
 import apiMiddleWare from '../middlewares/api';
 
 // on met bout à bout tous nos middlewares
-const middlewares = applyMiddleware(apiMiddleWare);
+const middlewares = applyMiddleware(thunk, apiMiddleWare);
 
 // on met bout à bout le redux devtools et nos middlewares
 // https://github.com/zalmoxisus/redux-devtools-extension#12-advanced-store-setup
