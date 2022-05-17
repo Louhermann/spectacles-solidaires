@@ -23,7 +23,7 @@ function Catalog() {
     <div className="catalog">
       <ul className="containers">
         {events.map((event) => (
-          <li className="container" key={event.id}>
+          <li className="container_catalog" key={event.id}>
             <NavLink to={`spectacle/${event.id}`}>
               <div className="catalog__show-poster">
                 <img className="catalog-images" src={event.picture_2} alt={`Poster ${event.title}`} />

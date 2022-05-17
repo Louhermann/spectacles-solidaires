@@ -6,6 +6,7 @@ import {
   SAVE_TOKEN,
   IS_LOGGED,
   LOG_OUT,
+  SAVE_USER,
 } from '../actions';
 
 const initialState = {
@@ -17,9 +18,18 @@ const initialState = {
   },
 
   signUp: {
+    email: 'a@gmail',
+    password: 'azerty',
+    lastname: 'azerty',
+    firstname: 'azerty',
+  },
+
+  user: {
+    lastname: '',
+    firstname: '',
     email: '',
     password: '',
-    lastName: '',
+    avatar: 'https://bootdey.com/img/Content/avatar/avatar7.png',
   },
 
   slider: {
@@ -75,6 +85,13 @@ function mainReducers(state = initialState, action = {}) {
       return {
         ...state,
         isLogged: action.bool,
+      };
+    case SAVE_USER:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+        },
       };
     default:
       return state;

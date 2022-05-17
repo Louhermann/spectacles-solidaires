@@ -6,10 +6,14 @@ import {
   LOGIN,
   isLogged,
   saveToken,
+  saveUser,
+  CREATE_USER,
+  GET_USER,
 } from '../actions';
 
 const axiosInstance = axios.create({
   baseURL: 'http://al1santa-server.eddi.cloud/projet-14-spectacles-solidaires-back/public/api/',
+
 });
 // const dispatch = useDispatch();
 
@@ -50,16 +54,77 @@ const apiMiddleWare = (store) => (next) => (action) => {
             username,
             password,
           },
+          {
+            headers:
+            {
+              Authorization: `Bearer ${token}`,
+            },
+          },
         )
         .then((response) => {
           console.log(response);
           store.dispatch(saveToken(response.data.token));
           store.dispatch(isLogged(true));
         })
-        // .then((response) => {
-        // })
         .catch((err) => {
           console.log('oups...');
+          console.log(err);
+        });
+      next(action);
+      break;
+    }
+
+    case CREATE_USER: {
+      const {
+        signUp: {
+          lastname,
+          firstname,
+          password,
+          email,
+        },
+      } = store.getState();
+      axiosInstance
+        .post(
+          'user/create',
+          {
+            lastname,
+            firstname,
+            password,
+            email,
+          },
+          {
+            headers:
+            {
+              Authorization: `Bearer ${token}`,
+            },
+          },
+        )
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      next(action);
+      break;
+    }
+
+    case GET_USER: {
+      axiosInstance
+        .get(
+          'user/',
+          {
+            headers:
+            {
+              Authorization: `Bearer ${token}`,
+            },
+          },
+        )
+        .then((response) => {
+          store.dispatch(saveUser(response.data.user));
+          console.log(response.data);
+        })
+        .catch((err) => {
           console.log(err);
         });
       next(action);

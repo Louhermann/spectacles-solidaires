@@ -3,15 +3,12 @@ import './connexion.scss';
 
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSignIn, setSignUp, login } from '../../actions';
+import {
+  setSignIn, setSignUp, login, createUser, getUser,
+} from '../../actions';
 
 // == Composant
 function Connexion() {
-  // const isLogged = useSelector((state) => state.isLogged);
-  // if (isLogged) {
-  //   return <Redirect to="/" />;
-  // }
-  // console.log(isLogged);
   const [isActive, setActive] = useState(false);
 
   const handleToggle = () => {
@@ -31,17 +28,18 @@ function Connexion() {
   function handleSubmitSignIn(evt) {
     evt.preventDefault();
     dispatch(login());
-    console.log('submit');
+    dispatch(getUser());
   }
 
   function handleSubmitSignUp(evt) {
     evt.preventDefault();
-    console.log('enregistré');
+    dispatch(createUser());
   }
 
   const valueSignUpEmail = useSelector((state) => state.signUp.email);
   const valueSignUpPassword = useSelector((state) => state.signUp.password);
-  const valueSignUpName = useSelector((state) => state.signUp.lastname);
+  const valueSignUpLastname = useSelector((state) => state.signUp.lastname);
+  const valueSignUpFirstname = useSelector((state) => state.signUp.firstname);
   const valueSignInPassword = useSelector((state) => state.signIn.password);
   const valueSignInEmail = useSelector((state) => state.signIn.username);
 
@@ -58,11 +56,19 @@ function Connexion() {
         >
           <h1 className="form-container-title">Créer un compte</h1>
           <input
-            name="lastName"
+            name="lastname"
             className="form-connexion-input"
             type="text"
             placeholder="Nom"
-            value={valueSignUpName}
+            value={valueSignUpLastname}
+            onChange={handleChangeSignUp}
+          />
+          <input
+            name="firstname"
+            className="form-connexion-input"
+            type="text"
+            placeholder="Prénom"
+            value={valueSignUpFirstname}
             onChange={handleChangeSignUp}
           />
           <input

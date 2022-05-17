@@ -79,3 +79,28 @@ export const logOut = (bool) => ({
   type: LOG_OUT,
   bool,
 });
+
+// ACTION TYPE SAVE_USER
+export const SAVE_USER = 'SAVE_USER';
+
+// ACTION CREATOR saveUser
+export const saveUser = (user) => ({
+  type: SAVE_USER,
+  user,
+});
+
+// ACTION TYPE CREATE_USER
+export const CREATE_USER = 'CREATE_USER';
+
+// ACTION CREATOR createUser
+export const createUser = () => ({
+  type: CREATE_USER,
+});
+
+// ACTION TYPE GETUSER
+export const GET_USER = 'GET_USER';
+
+// ACTION CREATOR getuser
+export const getUser = () => ({
+  type: GET_USER,
+});
