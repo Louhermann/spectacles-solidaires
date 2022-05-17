@@ -3,7 +3,7 @@ import {
   SAVE_DATA,
   saveEvent,
   LOGIN,
-  isLogged,
+  // isLogged,
 } from '../actions';
 
 const axiosInstance = axios.create({
@@ -50,8 +50,8 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .then((response) => {
           console.log(response);
-          // store.dispatch(response.data.token);
-          store.dispatch(isLogged(true));
+          store.dispatch(response.data.token);
+          // .dispatch(isLogged(true));
         })
         .catch((err) => {
           console.log('oups...');

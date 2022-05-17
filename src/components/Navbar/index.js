@@ -53,7 +53,11 @@ function Navbar() {
           )}
             { isLogged
           && (
-          <>
+          <button
+            className="button_logOut"
+            type="button"
+            onClick={handleLogOut}
+          >
             <AiOutlineUser
               size="40px"
               title="se connecter"
@@ -61,14 +65,8 @@ function Navbar() {
               text-align="-webkit-center"
               className="icon"
             />
-            <button
-              className="button_logOut"
-              type="button"
-              onClick={handleLogOut}
-            >
-              Se Déconnecter
-            </button>
-          </>
+            Se Déconnecter
+          </button>
           ) }
             {/* <NavLink className="list-item" to="Connexion">
               <AiOutlineUser

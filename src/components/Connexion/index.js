@@ -7,11 +7,11 @@ import { setSignIn, setSignUp, login } from '../../actions';
 
 // == Composant
 function Connexion() {
-  const isLogged = useSelector((state) => state.isLogged);
-  // if (isLogged) {
-  //   return null;
-  // }
-  console.log(isLogged);
+  // const isLogged = useSelector((state) => state.isLogged);
+  // // if (isLogged) {
+  // //   return null;
+  // // }
+  // console.log(isLogged);
   const [isActive, setActive] = useState(false);
 
   const handleToggle = () => {
