@@ -18,6 +18,15 @@ export const setSignIn = (value, name) => ({
   name,
 });
 
+// ACTION TYPE CONTACT
+export const CONTACT = 'CONTACT';
+
+// ACTION CREATOR CONTACT
+export const contact = () => ({
+  type: CONTACT,
+});
+
+
 // action saveData
 export const SAVE_DATA = 'SAVE_DATA';
 

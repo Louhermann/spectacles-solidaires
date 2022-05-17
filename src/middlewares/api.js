@@ -3,6 +3,7 @@ import {
   SAVE_DATA,
   saveEvent,
   LOGIN,
+  CONTACT,
   // isLogged,
 } from '../actions';
 
@@ -59,6 +60,34 @@ const apiMiddleWare = (store) => (next) => (action) => {
         });
       next(action);
       break;
+    }
+
+    case CONTACT: {
+      axiosInstance
+      .post(
+        {
+          // name,
+          // surname,
+          // email,
+          // phone, 
+          // public,
+          // budget,
+          // message,
+        },
+        )
+      .then((response)=>{
+        if (response.data.status === 'success') {
+          alert("Message Sent.");
+        } else if(response.data.status === 'fail') {
+          alert("Message failed to send.")
+        }
+      })
+      .catch((err) => {
+        console.log('oups...');
+      });
+      next(action);
+      break;
+    
     }
     default:
       next(action);
