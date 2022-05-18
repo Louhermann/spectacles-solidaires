@@ -3,7 +3,7 @@ import Hamburger from 'hamburger-react';
 import { useState } from 'react';
 import { AiOutlineUser } from 'react-icons/ai';
 import './navbar.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from '../../actions';
 
@@ -11,14 +11,17 @@ import { logOut } from '../../actions';
 function Navbar() {
   const isLogged = useSelector((state) => state.isLogged);
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
   };
 
   function handleLogOut() {
-    console.log('deco');
     dispatch(logOut(false));
+    navigate('/Connexion');
   }
   return (
     <div className={hamburgerOpen ? 'navbar-open' : 'navbar'}>
@@ -37,38 +40,51 @@ function Navbar() {
           <li className="li"><NavLink activeclassname="active" className="list-item" data-item="Catalogue" to="Catalogue">Catalogue</NavLink></li>
           <li className="li"><NavLink activeclassname="active" className="list-item" data-item="Contact" to="Contact">Contact</NavLink></li>
           <li className="li"><NavLink activeclassname="active" className="list-item" data-item="A propos" to="Apropos">À propos</NavLink></li>
-          <li className=" li login-item">
-            { !isLogged
+          { !isLogged
           && (
-          <NavLink className="list-item" to="Connexion">
-            <AiOutlineUser
-              size="40px"
-              title="se connecter"
-              display="flex"
-              text-align="-webkit-center"
-              className="icon"
-            />
-            Se connecter
-          </NavLink>
+          <li className="li login-item">
+            <NavLink className="list-item" to="Connexion">
+              <AiOutlineUser
+                size="40px"
+                title="se connecter"
+                display="flex"
+                text-align="-webkit-center"
+                className="icon"
+              />
+              Se connecter
+            </NavLink>
+          </li>
           )}
-            { isLogged
+          { isLogged
           && (
-          <button
-            className="button_logOut"
-            type="button"
-            onClick={handleLogOut}
-          >
-            <AiOutlineUser
-              size="40px"
-              title="se connecter"
-              display="flex"
-              text-align="-webkit-center"
-              className="icon"
-            />
-            Se Déconnecter
-          </button>
+            <>
+
+              <li className="li">
+                <NavLink activeclassname="active" className="list-item" data-item="Profil" to="Profil">
+                  Mon profil
+                </NavLink>
+              </li>
+              <li className="li login-item">
+                <NavLink className="list-item " to="Connexion">
+                  <button
+                    className="button_logOut"
+                    type="button"
+                    onClick={handleLogOut}
+                  >
+                    <AiOutlineUser
+                      size="40px"
+                      title="se connecter"
+                      display="flex"
+                      text-align="-webkit-center"
+                      className="icon "
+                    />
+                    Se déconnecter
+                  </button>
+                </NavLink>
+              </li>
+            </>
           ) }
-            {/* <NavLink className="list-item" to="Connexion">
+          {/* <NavLink className="list-item" to="Connexion">
               <AiOutlineUser
                 size="40px"
                 title="se connecter"
@@ -87,7 +103,6 @@ function Navbar() {
               </button>
               )} */}
 
-          </li>
         </ul>
       </nav>
     </div>

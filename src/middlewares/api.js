@@ -5,7 +5,7 @@ import {
   SAVE_DATA,
   saveEvent,
   LOGIN,
-  isLogged,
+  setIsLogged,
   saveToken,
   saveUser,
   CREATE_USER,
@@ -34,11 +34,9 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .then((response) => {
           store.dispatch(saveEvent(response.data.events));
-          // console.log(response.data.events);
         })
         .catch(
-          (response) => {
-            console.log(response);
+          () => {
           },
         );
       next(action);
@@ -63,14 +61,12 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          console.log(response);
           store.dispatch(saveToken(response.data.token));
-          store.dispatch(isLogged(true));
+          store.dispatch(setIsLogged(true));
         })
-        .catch((err) => {
-          console.log('oups...');
-          console.log(err);
+        .catch(() => {
         });
+
       next(action);
       break;
     }
@@ -100,11 +96,10 @@ const apiMiddleWare = (store) => (next) => (action) => {
             },
           },
         )
-        .then((response) => {
-          console.log(response.data);
+        .then(() => {
+          console.log('utilisateur crée');
         })
-        .catch((err) => {
-          console.log(err);
+        .catch(() => {
         });
       next(action);
       break;
@@ -125,8 +120,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           store.dispatch(saveUser(response.data.user));
           console.log(response.data);
         })
-        .catch((err) => {
-          console.log(err);
+        .catch(() => {
         });
       next(action);
       break;

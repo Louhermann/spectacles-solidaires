@@ -4,7 +4,7 @@ import {
   SAVE_EVENT,
   SET_GO_TO_SLIDE,
   SAVE_TOKEN,
-  IS_LOGGED,
+  SET_IS_LOGGED,
   LOG_OUT,
   SAVE_USER,
 } from '../actions';
@@ -95,7 +95,7 @@ function mainReducers(state = initialState, action = {}) {
         ...state,
         token: action.token,
       };
-    case IS_LOGGED:
+    case SET_IS_LOGGED:
       return {
         ...state,
         isLogged: action.bool,

@@ -1,21 +1,25 @@
 // == Import
 import './connexion.scss';
 
-import { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  setSignIn, setSignUp, login, createUser, getUser,
+  setSignIn, setSignUp, login, createUser, getUser, setIsLogged,
 } from '../../actions';
 
 // == Composant
 function Connexion() {
   const [isActive, setActive] = useState(false);
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const isLogged = useSelector((state) => state.isLogged);
+
   const handleToggle = () => {
     setActive(!isActive);
   };
-
-  const dispatch = useDispatch();
 
   function handleChangeSignUp(event) {
     dispatch(setSignUp(event.target.value, event.target.name));
@@ -29,8 +33,21 @@ function Connexion() {
     evt.preventDefault();
     dispatch(login());
     dispatch(getUser());
+    dispatch(setIsLogged(true));
+    console.log(isLogged);
+    // setTimeout(() => {
+    if (!isLogged) {
+      navigate('/Profil');
+    }
+    console.log('This will run after 2 second!');
+    // }, 0);
   }
-
+  // useEffect(
+  //   () => {
+  //     navigate('/Profil');
+  //   },
+  //   [handleSubmitSignIn],
+  // );
   function handleSubmitSignUp(evt) {
     evt.preventDefault();
     dispatch(createUser());

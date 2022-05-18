@@ -1,7 +1,20 @@
 // styles
 import './profil.scss';
 
+// npm
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { logOut } from '../../actions';
+
 function Profil() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  function handleLogOut() {
+    dispatch(logOut(false));
+    navigate('/');
+  }
+
   return (
     <div className="profil">
       <div className="profil__avatar">
@@ -14,7 +27,7 @@ function Profil() {
           <li className="profil__desc"><span className="profil__desc--span">Prénom : </span> </li>
           <li className="profil__desc"><span className="profil__desc--span">E-mail : </span></li>
         </ul>
-        <button className="profil__button" type="button"> Se déconnecter</button>
+        <button className="profil__button" type="button" onClick={handleLogOut}> Se déconnecter</button>
         <div>
           <button className="profil__button--delete" type="button"> Supprimer mon compte</button>
         </div>
