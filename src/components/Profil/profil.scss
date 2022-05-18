@@ -1,0 +1,40 @@
+@media screen and (min-width:200px){
+  .profil{
+    margin: 0 auto;
+    width: 75%;
+    &__avatar{
+      &--picture{
+        max-width: 50%;
+      }
+    }
+    &__title{
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1rem auto;
+    }
+    &__desc{
+      font-style: italic;
+      font-size: 1rem;
+      margin-bottom: .5rem;
+      &--span{
+        font-weight: bold;
+      }
+    }
+    &__button{
+      background-color: azure;
+      font-size: 1.2rem;
+      border-radius: 20px;
+      padding: 5px 10px;
+      margin-bottom: 2rem;
+      &--delete{
+        background-color: red;
+        font-size: 1.2rem;
+        border-radius: 20px;
+        padding: 5px 10px;
+        color: white;
+        border: 2px solid white;
+      }
+    }
+  }
+  
+}

@@ -1,16 +1,22 @@
 // import emailjs from '@emailjs/browser';
 import axios from 'axios';
+
 import {
   SAVE_DATA,
   saveEvent,
   LOGIN,
-  // CONTACT,
-  // isLogged,
+  isLogged,
+  saveToken,
+  saveUser,
+  CREATE_USER,
+  GET_USER,
 } from '../actions';
 
 const axiosInstance = axios.create({
   baseURL: 'http://al1santa-server.eddi.cloud/projet-14-spectacles-solidaires-back/public/api/',
+
 });
+// const dispatch = useDispatch();
 
 const apiMiddleWare = (store) => (next) => (action) => {
   const { token } = store.getState();
@@ -49,11 +55,17 @@ const apiMiddleWare = (store) => (next) => (action) => {
             username,
             password,
           },
+          {
+            headers:
+            {
+              Authorization: `Bearer ${token}`,
+            },
+          },
         )
         .then((response) => {
           console.log(response);
-          store.dispatch(response.data.token);
-          // .dispatch(isLogged(true));
+          store.dispatch(saveToken(response.data.token));
+          store.dispatch(isLogged(true));
         })
         .catch((err) => {
           console.log('oups...');
@@ -63,16 +75,62 @@ const apiMiddleWare = (store) => (next) => (action) => {
       break;
     }
 
-    // case CONTACT: {
-    //   emailjs.sendForm('service_v5agd3h', 'template_svj2zrl', '#contact', 'V7f8HPedeyRo5IJ-4')
-    //     .then((response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     }, (error) => {
-    //       console.log('FAILED...', error);
-    //     });
-    //   next(action);
-    //   break;
-    // }
+    case CREATE_USER: {
+      const {
+        signUp: {
+          lastname,
+          firstname,
+          password,
+          email,
+        },
+      } = store.getState();
+      axiosInstance
+        .post(
+          'user/create',
+          {
+            lastname,
+            firstname,
+            password,
+            email,
+          },
+          {
+            headers:
+            {
+              Authorization: `Bearer ${token}`,
+            },
+          },
+        )
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      next(action);
+      break;
+    }
+
+    case GET_USER: {
+      axiosInstance
+        .get(
+          'user/',
+          {
+            headers:
+            {
+              Authorization: `Bearer ${token}`,
+            },
+          },
+        )
+        .then((response) => {
+          store.dispatch(saveUser(response.data.user));
+          console.log(response.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      next(action);
+      break;
+    }
     default:
       next(action);
   }

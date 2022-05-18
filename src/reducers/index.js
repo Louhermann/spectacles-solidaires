@@ -6,11 +6,11 @@ import {
   SAVE_TOKEN,
   IS_LOGGED,
   LOG_OUT,
-  // SET_CONTACT,
+  SAVE_USER,
 } from '../actions';
 
 const initialState = {
-  isLogged: true,
+  isLogged: false,
 
   signIn: {
     username: 'admin@admin.com',
@@ -18,9 +18,18 @@ const initialState = {
   },
 
   signUp: {
+    email: 'a@gmail',
+    password: 'azerty',
+    lastname: 'azerty',
+    firstname: 'azerty',
+  },
+
+  user: {
+    lastname: '',
+    firstname: '',
     email: '',
     password: '',
-    lastName: '',
+    avatar: 'https://bootdey.com/img/Content/avatar/avatar7.png',
   },
 
   slider: {
@@ -38,7 +47,7 @@ const initialState = {
   // },
 
   events: [],
-  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI4NTkyMTgsImV4cCI6MTY1MjkyNDAxOCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSJ9.EMFMIFAXmisOF_4Ec1YNRV9I3kgpaw34c9f3iAVy3rd04j6r6iNjHakVd0fmU0vm3eJNMOWlAXwpxwneuWspUAoNeuUIHFy-5EviBCeS69L53EDZ6pJyorqfzP7Uaqj9xedi0Gz-xh-uwAArMAycWGJObYIkWMonIRhGRFcIlCljS6iuFW1G7-ewFM5GfrPP2wplBmp8VglEPxZtELDsV8NuNjZQAty8dXIiAo2dM9t1bKS8zUE7XZBWuL-ipff2WerM-1NDIdTKJTYcAzD_f8OXFc9DY5YbEh2YmESa2c0PZDIwtRpznpaoLG3XKT4NSPSwqkLp6M_LNWD8qGIYGQ',
+  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI4Njc0MjQsImV4cCI6MTY1MjkzMjIyNCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSJ9.CxWn4e71L7gyDjxk7jLMvLrPV8wwzRjHG5YeIEfcrNl1KITmVVZvQM3cV3r4GhXRqiF-JkztHvLJP8-1147QHcM-H3dgMnjv-Gy4Ei3KlmuF2zA11uwAWMRBzqWL8kzEmDTIRQHWhm4R2wjkQqjblQliCDOHnSfwhZFyVo9eXk7ud6QvgZwO-lhXaq30t1BHIKitzcWPW0zsLC7i0tnvYLxvkFO3fXwhCc2iR_pVDlonO3GwbAgwm-VPvszO950WfvhglBOfb728Z3AAJvGSpkPkDkDLdPfltTSbxCIZkjignMGN3iaf9320UZqGyHBZwp9pZaNRHFdIo49lx2ftTQ',
 };
 
 function mainReducers(state = initialState, action = {}) {
@@ -95,6 +104,13 @@ function mainReducers(state = initialState, action = {}) {
       return {
         ...state,
         isLogged: action.bool,
+      };
+    case SAVE_USER:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+        },
       };
     default:
       return state;
