@@ -18,23 +18,23 @@ export const setSignIn = (value, name) => ({
   name,
 });
 
-// ACTION TYPE CONTACT
-export const CONTACT = 'CONTACT';
+// // ACTION TYPE CONTACT
+// export const CONTACT = 'CONTACT';
 
-// ACTION CREATOR CONTACT
-export const contact = () => ({
-  type: CONTACT,
-});
+// // ACTION CREATOR CONTACT
+// export const contact = () => ({
+//   type: CONTACT,
+// });
 
-// ACTION TYPE SET_CONTACT
-export const SET_CONTACT = 'SET_CONTACT';
+// // ACTION TYPE SET_CONTACT
+// export const SET_CONTACT = 'SET_CONTACT';
 
-// ACTION CREATOR SET_CONTACT
-export const setContact = (value, name) => ({
-  type: SET_CONTACT,
-  value,
-  name,
-});
+// // ACTION CREATOR SET_CONTACT
+// export const setContact = (value, name) => ({
+//   type: SET_CONTACT,
+//   value,
+//   name,
+// });
 
 // action saveData
 export const SAVE_DATA = 'SAVE_DATA';

@@ -1,10 +1,10 @@
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import axios from 'axios';
 import {
   SAVE_DATA,
   saveEvent,
   LOGIN,
-  CONTACT,
+  // CONTACT,
   // isLogged,
 } from '../actions';
 
