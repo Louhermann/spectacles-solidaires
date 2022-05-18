@@ -63,16 +63,16 @@ const apiMiddleWare = (store) => (next) => (action) => {
       break;
     }
 
-    case CONTACT: {
-      emailjs.sendForm('service_v5agd3h', 'template_svj2zrl', '#contact', 'V7f8HPedeyRo5IJ-4')
-        .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
-        }, (error) => {
-          console.log('FAILED...', error);
-        });
-      next(action);
-      break;
-    }
+    // case CONTACT: {
+    //   emailjs.sendForm('service_v5agd3h', 'template_svj2zrl', '#contact', 'V7f8HPedeyRo5IJ-4')
+    //     .then((response) => {
+    //       console.log('SUCCESS!', response.status, response.text);
+    //     }, (error) => {
+    //       console.log('FAILED...', error);
+    //     });
+    //   next(action);
+    //   break;
+    // }
     default:
       next(action);
   }
