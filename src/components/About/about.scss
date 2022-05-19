@@ -8,7 +8,6 @@
 
   .accordion {
     background-color: #FFE8D2;
-    color: #444;
     cursor: pointer;
     padding: 18px;
     width: 75%;
@@ -213,11 +212,16 @@ span {
 }
 
 
+@media screen and (min-width: 409px) {
+  .about_actors_image {
+    height: 278px;
+  }
 
+}
 
 @media screen and (min-width: 599px) {
   .about_actors_image {
-    height: 345px;
+    height: 380px;
   }
 
   .about_title {
@@ -228,6 +232,11 @@ span {
   }
 }
 
+@media screen and (min-width: 848px) {
+  .about_actors_image {
+    height: 462px;
+  }
+}
 
 
 
