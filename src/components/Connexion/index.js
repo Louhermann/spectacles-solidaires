@@ -31,7 +31,6 @@ function Connexion() {
 
   function handleSubmitSignIn(evt) {
     evt.preventDefault();
-    // dispatch(setIsLogged(true));
     dispatch(login());
     dispatch(getUser());
     if (isLogged) {
