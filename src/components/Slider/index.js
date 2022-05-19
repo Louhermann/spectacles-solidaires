@@ -1,101 +1,134 @@
-import { useState, useEffect } from 'react';
-import Carousel from 'react-spring-3d-carousel';
-import uuidv4 from 'uuid';
-import { config } from 'react-spring';
-import './slider.scss';
+// import { useState, useEffect } from 'react';
+// import Carousel from 'react-spring-3d-carousel';
+// import uuidv4 from 'uuid';
+// import { config } from 'react-spring';
+// import './slider.scss';
 
-// == Image
-import image1 from '../../assets/images/Artichocolat/Artichocolat.jpg';
-import image2 from '../../assets/images/La note magique/La_note_magique.jpg';
-import image3 from '../../assets/images/Le murmure de la mer/Le_murmure_de_la_mer.jpg';
-import image4 from '../../assets/images/Les défis et Enigmes/Les_défis.jpg';
-import image5 from '../../assets/images/Les Experiences Spectaculaires/Les_expériences_S.jpg';
-import image6 from '../../assets/images/Les Mains Bavardeuses/Les_mains_Bavardeuses.jpg';
-import image7 from '../../assets/images/Badou/Badou.jpg';
-import image8 from '../../assets/images/Nekolo/Nekolo.jpg';
-import image9 from '../../assets/images/Petite ombre/Petite_ombre.jpg';
-import image10 from '../../assets/images/Sur le port de chine/Sur_le_port.jpg';
+// // == Image
+// import image1 from '../../assets/images/Artichocolat/Artichocolat.jpg';
+// import image2 from '../../assets/images/La note magique/La_note_magique.jpg';
+// import image3 from '../../assets/images/Le murmure de la mer/Le_murmure_de_la_mer.jpg';
+// import image4 from '../../assets/images/Les défis et Enigmes/Les_défis.jpg';
+// import image5 from '../../assets/images/Les Experiences Spectaculaires/Les_expériences_S.jpg';
+// import image6 from '../../assets/images/Les Mains Bavardeuses/Les_mains_Bavardeuses.jpg';
+// import image7 from '../../assets/images/Badou/Badou.jpg';
+// import image8 from '../../assets/images/Nekolo/Nekolo.jpg';
+// import image9 from '../../assets/images/Petite ombre/Petite_ombre.jpg';
+// import image10 from '../../assets/images/Sur le port de chine/Sur_le_port.jpg';
 
-export default function Slider() {
-  const [state, setState] = useState({
-    // goToSlide: 0,
-    offsetRadius: 1,
-    showNavigation: true,
-    config: config.wobbly,
-  });
+// export default function Slider() {
+//   const [state, setState] = useState({
+//     // goToSlide: 0,
+//     offsetRadius: 1,
+//     showNavigation: true,
+//     config: config.wobbly,
+//   });
 
-  const [goToSlide, setGoToSlide] = useState(0);
+//   const [goToSlide, setGoToSlide] = useState(0);
 
-  const slides = [
-    {
-      key: uuidv4(),
-      content: <img src={image1} alt="1" />,
-    },
-    {
-      key: uuidv4(),
-      content: <img src={image2} alt="2" />,
-    },
-    {
-      key: uuidv4(),
-      content: <img src={image3} alt="3" />,
-    },
-    {
-      key: uuidv4(),
-      content: <img src={image4} alt="4" />,
-    },
-    {
-      key: uuidv4(),
-      content: <img src={image5} alt="5" />,
-    },
-    {
-      key: uuidv4(),
-      content: <img src={image6} alt="6" />,
-    },
-    {
-      key: uuidv4(),
-      content: <img src={image7} alt="7" />,
-    },
-    {
-      key: uuidv4(),
-      content: <img src={image8} alt="8" />,
-    },
-    {
-      key: uuidv4(),
-      content: <img src={image9} alt="9" />,
-    },
-    {
-      key: uuidv4(),
-      content: <img src={image10} alt="10" />,
-    },
-  ].map((slide, index) => ({
-    ...slide,
-    onClick: () => setState({ goToSlide: index }),
-  }));
+//   const slides = [
+//     {
+//       key: uuidv4(),
+//       content: <img src={image1} alt="1" />,
+//     },
+//     {
+//       key: uuidv4(),
+//       content: <img src={image2} alt="2" />,
+//     },
+//     {
+//       key: uuidv4(),
+//       content: <img src={image3} alt="3" />,
+//     },
+//     {
+//       key: uuidv4(),
+//       content: <img src={image4} alt="4" />,
+//     },
+//     {
+//       key: uuidv4(),
+//       content: <img src={image5} alt="5" />,
+//     },
+//     {
+//       key: uuidv4(),
+//       content: <img src={image6} alt="6" />,
+//     },
+//     {
+//       key: uuidv4(),
+//       content: <img src={image7} alt="7" />,
+//     },
+//     {
+//       key: uuidv4(),
+//       content: <img src={image8} alt="8" />,
+//     },
+//     {
+//       key: uuidv4(),
+//       content: <img src={image9} alt="9" />,
+//     },
+//     {
+//       key: uuidv4(),
+//       content: <img src={image10} alt="10" />,
+//     },
+//   ].map((slide, index) => ({
+//     ...slide,
+//     onClick: () => setState({ goToSlide: index }),
+//   }));
 
-  const isTrue = true;
-  const num = 0;
+//   const isTrue = true;
+//   const num = 0;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      console.log(num);
-      num + 1;
-    }, 2000);
-    return () => clearInterval(interval)setGoToSlide(num);
-  }, []);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       console.log(num);
+//       num + 1;
+//     }, 2000);
+//     return () => clearInterval(interval)setGoToSlide(num);
+//   }, []);
 
+//   return (
+//     <div className="carousel">
+//       <h1 className="carousel__title">Nos Spectacles </h1>
+//       <div className="carousel-container">
+//         <Carousel
+//           slides={slides}
+//           goToSlide={goToSlide}
+//           offsetRadius={3}
+//           showNavigation={isTrue}
+//           animationConfig={state.config}
+//         />
+//       </div>
+//     </div>
+
+//   );
+// }
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+
+import './styles.css';
+
+// import required modules
+import { EffectCards } from 'swiper';
+
+export default function App() {
   return (
-    <div className="carousel">
-      <h1 className="carousel__title">Nos Spectacles </h1>
-      <div className="carousel-container">
-        <Carousel
-          slides={slides}
-          goToSlide={goToSlide}
-          offsetRadius={3}
-          showNavigation={isTrue}
-          animationConfig={state.config}
-        />
-      </div>
-    </div>
-
+    <Swiper
+      effect="cards"
+      grabCursor
+      modules={[EffectCards]}
+      className="mySwiper"
+    >
+      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 2</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>Slide 5</SwiperSlide>
+      <SwiperSlide>Slide 6</SwiperSlide>
+      <SwiperSlide>Slide 7</SwiperSlide>
+      <SwiperSlide>Slide 8</SwiperSlide>
+      <SwiperSlide>Slide 9</SwiperSlide>
+    </Swiper>
   );
 }

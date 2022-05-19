@@ -65,6 +65,7 @@
     "react-spring": "^9.4.4",
     "react-spring-3d-carousel": "^1.2.1",
     "redux": "^4.2.0",
+    "swiper": "^8.1.5",
     "uuid": "^3.3.2"
   }
 }

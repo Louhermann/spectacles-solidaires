@@ -1,6 +1,6 @@
 // Import styles
 import './home.scss';
-import Slider from 'src/components/Slider';
+import Swipper from 'src/components/Swipper';
 
 // == Img
 
@@ -24,7 +24,7 @@ function Home() {
 
       </div>
       <div>
-        <Slider />
+        <Swipper />
       </div>
     </>
   );
