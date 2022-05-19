@@ -65,6 +65,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           store.dispatch(setIsLogged(true));
         })
         .catch(() => {
+          console.log('erreur');
         });
 
       next(action);

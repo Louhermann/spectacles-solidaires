@@ -38,7 +38,7 @@
     width: 100%;
   }
 
-  .container_catalog {
+  .container {
     position: relative;
     display: block;
     border-radius: calc(var(--curve) * 1px);
@@ -148,7 +148,7 @@
 
 @media screen and (min-width: 1023px) {
 
-  .container_catalog {
+  .container {
     width: 19rem;
     height: 30rem;
   }

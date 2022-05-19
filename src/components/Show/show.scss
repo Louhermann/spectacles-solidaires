@@ -549,6 +549,10 @@
   .show {
 
     &__center {
+
+      &--categories {
+        padding-bottom: 11em;
+      }
       
       &__middle {
         left: 20px
