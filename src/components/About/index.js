@@ -3,42 +3,147 @@ import './about.scss';
 
 function About() {
   return (
-    <>
-      <h2 className="section-title">
-        Les acteurs concernés
+    <div className="about">
+      <h2 className="about_title">
+        La portée solidaire de notre projet 
       </h2>
-      <section className="actors">
-        <div className="actors-card">
-          <div className="actors-box">
-            <div className="actors-box-content">
-              <h3 className="actors-box-content-title">
-                Organismes aidants
-              </h3>
-              <p className="actors-box-content-p">
-                <span>
-                &nbsp; Tout organisme privé ou public
+      <section className="about_actors">
+      <div className="about_actors_image"></div>
+      <ul className="about_actors_list">
+        <li className="about_actors_list-item">
+          <h3 className="about_actors_list-title">
+            Organismes aidants
+          </h3>
+          <p className="about_actors_list-content">
+            Tout organisme ayant un budget et souhaitant programmer un spectacle dans sa structure, peut choisir de financer une seconde représentation de ce spectacle, qui aura lieu dans une de nos associations caritatives partenaires.
+          </p>
+          <p className="about_actors_list-content">
+            Si c'est le cas, votre organisme devient organisme AIDANT au sein du concept "spectacles solidaires".
+           </p>
+          <h2 className="about_actors_list-subtitle">
+            Qui est concerné ? 
+          </h2>
+          <p className="about_actors_list-content"> 
+              <span>
+              &nbsp; Tout organisme privé ou public
                   souhaitant faire intervenir un spectacle
                   vivant peux aider. &nbsp;
-                </span>
+              </span>
+          </p> 
+        </li>
+
+        <li className="about_actors_list-item">
+          <h3 className="about_actors_list-title">
+          Organismes aidés
+          </h3>
+          <p className="about_actors_list-content">
+          Les organismes aidés sont des 
+                <span>
+                &nbsp; associations
+                  solidaires caritatives &nbsp;
+                </span> 
+                en partenariat avec les spectacles solidaires.
+           </p>
+
+           <p className="about_actors_list-content">
+                Grâce aux organimes aidants, elles bénéficient d'une représentation d'un spectacle et touchent un public n'ayant habituellement pas (ou très peu) accès aux spectacles vivants.
               </p>
-              <p className="actors-box-content-p">
-                Si vous avez un budget
-                qui permet de faire intervenir deux
-                représentations d'un spectacle vivants
-                vous pouvez être un organisme AIDANT
-                du concept "spectacles solidaires".
+
+          <h2 className="about_actors_list-subtitle">
+            Qui est concerné ? 
+          </h2>
+          <p className="about_actors_list-content">
+              <span>
+              &nbsp; Toute associations ayant un public n'ayant pas ou peu accès aux spectacles vivants peut devenir partenaire du concept "spectacles solidaires". &nbsp;
+              </span>     
+          </p>
+        </li>
+
+        <li className="about_actors_list-item">
+          <h3 className="about_actors_list-title">
+          Les spectacles vivants
+          </h3>
+          <p className="about_actors_list-content">
+          "Les spectacles solidaires" ouvrent un
+                partenariat avec des
+                <span>
+                &nbsp; compagnies de
+                  théâtres et des artistes indépendants &nbsp;
+                </span> qui
+                proposent des spectacles vivants originaux
+                et de tous horizons pour petits et grands.
+           </p>
+          <h2 className="about_actors_list-subtitle">
+            Qui est concerné ? 
+          </h2>
+          <p className="about_actors_list-content">
+              <span>
+              &nbsp; Toute compagnie de
+                  théâtre et  artiste indépendant ayant à coeur de diffuser ses spectacle à un public varié et nottament à ceux qui n'ont habituellement pas accès aux spectacles vivants peut devenir partenaire du concept "spectacle solidaire". &nbsp;
+              </span>
+          </p> 
+        </li>
+
+      </ul>
+
+      </section>
+
+      </div> 
+
+
+/* 
+
+        <div className="about_actors-card">
+          <div className="about_actors-box">
+            <div className="about_actors-box-content">
+              <h3 className="about_actors-box-content-title">
+              Organismes aidés
+              </h3>
+              <p className="about_actors-box-content-p">
+                Les organismes aidés sont des 
+                <span>
+                &nbsp; associations
+                  solidaires caritatives &nbsp;
+                </span> 
+                en partenariat avec les spectacles solidaires.
+              </p>
+              
+              <p className="about_actors-box-content-p">
+                Grâce aux organimes aidants, elles bénéficient d'une représentation d'un spectacle et touchent un public n'ayant habituellement pas (ou très peu) accès aux spectacles vivants.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="actors-card">
-          <div className="actors-box">
-            <div className="actors-box-content">
-              <h3 className="actors-box-content-title">
+        <div className="about_actors-card">
+          <div className="about_actors-box">
+            <div className="about_actors-box-content">
+              <h3 className="about_actors-box-content-title">
+              Organismes aidés
+              </h3>
+              <p className="about_actors-box-content-p">
+                Les organismes aidés sont des 
+                <span>
+                &nbsp; associations
+                  solidaires caritatives &nbsp;
+                </span> 
+                en partenariat avec les spectacles solidaires.
+              </p>
+              
+              <p className="about_actors-box-content-p">
+                Grâce aux organimes aidants, elles bénéficient d'une représentation d'un spectacle et touchent un public n'ayant habituellement pas (ou très peu) accès aux spectacles vivants.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="about_actors-card">
+          <div className="about_actors-box">
+            <div className="about_actors-box-content">
+              <h3 className="about_actors-box-content-title">
                 Organismes aidés
               </h3>
-              <p className="actors-box-content-p">
+              <p className="about_actors-box-content-p">
                 Les spectacles solidaires seront en
                 partenariat avec différentes
                 <span>
@@ -49,7 +154,7 @@ function About() {
                 n'ayant pas accès (ou très peu) aux
                 spectacles vivants.
               </p>
-              <p className="actors-box-content-p">
+              <p className="about_actors-box-content-p">
                 Ces structures seront
                 les acteurs principaux AIDÉS.
               </p>
@@ -57,13 +162,13 @@ function About() {
           </div>
         </div>
 
-        <div className="actors-card">
-          <div className="actors-box">
-            <div className="actors-box-content">
-              <h3 className="actors-box-content-title">
+        <div className="about_actors-card">
+          <div className="about_actors-box">
+            <div className="about_actors-box-content">
+              <h3 className="about_actors-box-content-title">
                 Spectacles vivants
               </h3>
-              <p className="actors-box-content-p">
+              <p className="about_actors-box-content-p">
                 "Les spectacles solidaires" ouvrent un
                 partenariat avec des
                 <span>
@@ -75,10 +180,10 @@ function About() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </div> 
+      {/* </section>  */
 
-      <h2 className="section-title">Comment ça marche ? </h2>
+      /* <h2 className="section-title">Comment ça marche ? </h2>
       <section className="process">
         <div className="process-card">
           <div className="process-box">
@@ -150,9 +255,8 @@ function About() {
               <a className="process-box-content-a" href="#">En savoir plus</a>
             </div>
           </div>
-        </div>
-      </section>
-    </>
+        </div> */
+      /* </section>  */
   );
 }
 
