@@ -6,6 +6,35 @@
 
 @media screen and (min-width: 279px) {
 
+  .accordion {
+    background-color: #FFE8D2;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 75%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: 0.5em;
+    border-radius: 20px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: #FFE8D2;
+    display: none;
+    overflow: hidden;
+    width: 75%;
+    margin: auto;
+    border-radius: 20px;
+
+  }
+
 .about_actors_image {
   background-image: url("../../assets/images/Model/images/about-image.png");
   background-size: cover;
@@ -27,7 +56,7 @@
   padding: 0.5em;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .about_actors_list-item {
@@ -81,13 +110,16 @@ span {
   border-radius: 15px;
   margin: 30px;
   transition: 0.5s;
+  // background-color: #FFE8D2;
+  color: black;
 }
+
 .process-card:nth-child(1) .process-box-content-a {
   background: #2196f3;
 }
 
 .process-card:nth-child(2)  .process-box-content-a {
-  background: #e91e63;
+  background: #7f00ff;
 }
 
 .process-card:nth-child(3) .process-box-content-a {
@@ -95,7 +127,7 @@ span {
 }
 
 .process-card:nth-child(4) .process-box-content-a {
-  background: #7f00ff;
+  background: #e91e63;
 }
 
 .process-box {
@@ -111,6 +143,8 @@ span {
   align-items: center;
   overflow: hidden;
   transition: 0.5s;
+  color: black;
+
 }
 
  .process-box:hover {
@@ -141,19 +175,19 @@ span {
 }
  .process-box-content-title {
   font-size: 1.8rem;
-  color: #fff;
   z-index: 1;
   transition: 0.5s;
   margin-bottom: 15px;
+  color: black;
 }
 
  .process-box-content-p {
   font-size: 1rem;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
   z-index: 1;
   transition: 0.5s;
   padding: 0.5em;
+  color: black;
 }
 
  .process-box-content-a {
@@ -189,6 +223,9 @@ span {
   .about_title {
     font-size: 3.5rem;
   }
+  .about_actors_list-title { 
+    font-size: 1.5em;
+  }
 }
 
 
@@ -196,7 +233,7 @@ span {
 
 @media screen and (min-width: 1023px) {
   .about_actors_image {
-    height: 465px;
+    height: 620px;
   }
 
   .about_title {
@@ -206,7 +243,7 @@ span {
 
 @media screen and (min-width: 1400px) {
   .about_actors_image {
-    height: 1200px;
+    height: 900px;
   }
   .about_title {
     font-size: 5.5rem;

@@ -1,16 +1,117 @@
 // styles
 import './about.scss';
+import {useState} from 'react';
 
 function About() {
+
+  const [isActive, setActive] = useState(false);
+
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
+
+
   return (
     <>
     <div className="about">
+
       <h2 className="about_title">
-        La portée solidaire de notre projet
+        Rendons la culture accessible à tous !
       </h2>
       <section className="about_actors">
+
         <div className="about_actors_image"></div>
-        <ul className="about_actors_list">
+        <h2 className="about_title">Les acteurs</h2>
+
+        <button  
+          className={isActive ? 'about_actors_list-title accordion active': 'about_actors_list-title accordion'}
+          onClick={toggleClass}>
+          Organisme aidant</button>
+
+        <div className="panel"
+        style={{
+          display: isActive ? 'block' : 'none'
+        }}>
+            <p className="about_actors_list-content">
+              Tout organisme ayant un budget et souhaitant programmer un spectacle dans sa structure, peut choisir de financer une seconde représentation de ce spectacle, qui aura lieu dans une de nos associations caritatives partenaires.
+            </p>
+            <p className="about_actors_list-content">
+              Si c'est le cas, votre organisme devient organisme AIDANT au sein du concept "spectacles solidaires".
+            </p>
+            <h2 className="about_actors_list-subtitle">
+              Qui est concerné?
+            </h2>
+            <p className="about_actors_list-content">
+              <span>
+               &nbsp;Tout organisme privé ou public
+                souhaitant faire intervenir un spectacle
+                vivant peux aider.&nbsp;
+              </span>
+            </p>
+</div>
+
+      <button 
+        className={isActive ? 'about_actors_list-title accordion active': ' about_actors_list-title accordion'}
+        onClick={toggleClass}>
+    Organisme aidé</button>
+<div className="panel" 
+style={{
+  display: isActive ? 'block' : 'none'
+}}>>
+            <p className="about_actors_list-content">
+              Les organismes aidés sont des
+              <span>
+                &nbsp;associations
+                solidaires caritatives&nbsp;
+              </span>
+              en partenariat avec les spectacles solidaires.
+            </p>
+
+            <p className="about_actors_list-content">
+              Grâce aux organimes aidants, elles bénéficient d'une représentation d'un spectacle et touchent un public n'ayant habituellement pas (ou très peu) accès aux spectacles vivants.
+            </p>
+
+            <h2 className="about_actors_list-subtitle">
+              Qui est concerné?
+            </h2>
+            <p className="about_actors_list-content">
+              <span>
+                &nbsp;Toute associations ayant un public n'ayant pas ou peu accès aux spectacles vivants peut devenir partenaire du concept "spectacles solidaires".&nbsp;
+              </span>
+            </p>
+</div>
+
+<button
+           
+ className={isActive ? 'about_actors_list-title accordion active': ' about_actors_list-title accordion'}
+          onClick={toggleClass}>
+          Spectacles vivants</button>
+<div className="panel"
+style={{
+  display: isActive ? 'block' : 'none'
+}}>>
+<p className="about_actors_list-content">
+              "Les spectacles solidaires" ouvrent un
+              partenariat avec des
+              <span>
+                &nbsp;compagnies de
+                théâtres et des artistes indépendants&nbsp;
+              </span>qui
+              proposent des spectacles vivants originaux
+              et de tous horizons pour petits et grands.
+            </p>
+            <h2 className="about_actors_list-subtitle">
+              Qui est concerné?
+            </h2>
+            <p className="about_actors_list-content">
+              <span>
+                &nbsp;Toute compagnie de
+                théâtre et  artiste indépendant ayant à coeur de diffuser ses spectacle à un public varié et nottament à ceux qui n'ont habituellement pas accès aux spectacles vivants peut devenir partenaire du concept "spectacle solidaire".&nbsp;
+              </span>
+            </p>
+</div>
+
+        {/* <ul className="about_actors_list">
           <li className="about_actors_list-item">
             <h3 className="about_actors_list-title">
               Organismes aidants
@@ -84,7 +185,7 @@ function About() {
               </span>
             </p>
           </li>
-        </ul>
+        </ul> */}
 
       </section>
 
