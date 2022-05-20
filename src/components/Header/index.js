@@ -1,6 +1,7 @@
 // == Import
 import './header.scss';
 import Navbar from 'src/components/Navbar';
+// import $ from 'jquery';
 
 // == Composant
 function Header() {

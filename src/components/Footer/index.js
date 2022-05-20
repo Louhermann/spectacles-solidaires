@@ -8,7 +8,7 @@ function Footer() {
     <div className="footer">
       <NavLink className="footer-item" to="Contact">Contact</NavLink>
       <NavLink className="footer-item" to="Apropos">À propos</NavLink>
-      <a href="https://www.instagram.com/mathildebeve/?hl=fr" className="footer-item" to="Instagram"><img alt="instagram-logo" src="../../assets/images/Model/images/instagram.png" />Suivez-nous sur Instagram</a>
+      <a target="_blank" rel="noreferrer" href="https://www.instagram.com/mathildebeve/?hl=fr" className="footer-item" to="Instagram"><img alt="instagram-logo" src="../../assets/images/Model/images/instagram.png" />Suivez-nous sur Instagram</a>
     </div>
   );
 }

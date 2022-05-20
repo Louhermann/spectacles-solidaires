@@ -11,7 +11,6 @@ import { logOut } from '../../actions';
 function Navbar() {
   const isLogged = useSelector((state) => state.isLogged);
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -32,15 +31,15 @@ function Navbar() {
         className="hamburger"
         onClick={toggleHamburger}
       >
-        <Hamburger />
+        <Hamburger toggled={hamburgerOpen} />
       </div>
       <nav className={hamburgerOpen ? 'nav-open' : 'nav-close'}>
         {/* menu items */}
         <ul className={hamburgerOpen ? 'ul ul-open' : 'ul ul-close'}>
-          <li className="li"><NavLink activeclassname="active" className="list-item" data-item="Accueil" to="/">Accueil</NavLink></li>
-          <li className="li"><NavLink activeclassname="active" className="list-item" data-item="Catalogue" to="Catalogue">Catalogue</NavLink></li>
-          <li className="li"><NavLink activeclassname="active" className="list-item" data-item="Contact" to="Contact">Contact</NavLink></li>
-          <li className="li"><NavLink activeclassname="active" className="list-item" data-item="A propos" to="Apropos">À propos</NavLink></li>
+          <li className="li"><NavLink activeclassname="active" className="list-item" onClick={toggleHamburger} data-item="Accueil" to="/">Accueil</NavLink></li>
+          <li className="li"><NavLink activeclassname="active" className="list-item" onClick={toggleHamburger} data-item="Catalogue" to="Catalogue">Catalogue</NavLink></li>
+          <li className="li"><NavLink activeclassname="active" className="list-item" onClick={toggleHamburger} data-item="Contact" to="Contact">Contact</NavLink></li>
+          <li className="li"><NavLink activeclassname="active" className="list-item" onClick={toggleHamburger} data-item="A propos" to="Apropos">À propos</NavLink></li>
           { !isLogged
           && (
           <li className="li login-item">
