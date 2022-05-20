@@ -1,7 +1,5 @@
 // == Import
-import {
-  Routes, Route, Navigate,
-} from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
@@ -42,21 +40,16 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="Catalogue" element={<Catalog />} />
         <Route path="404" element={<Error404 />} />
-        {/* <Route path="Connexion" element={<Connexion />} /> */}
         {events.map((event) => (
           <Route path="Catalogue/spectacle/:slug" key={event.id} element={<Show key={event.title} />} />
         ))};
-
-        {/* <Route path="Connexion" element={<Profil />} /> */}
-
         <Route path="*" element={<Navigate replace to="404" />} />
         {!isLogged
           ? <Route path="Connexion" element={<Connexion />} />
           : (
             <>
-              {/* <Route path="Connexion" element={<Profil />} /> */}
-              {/* <Route path="Connexion" element={<Navigate replace to="Profil" />} /> */}
               <Route path="Profil" element={<Profil />} />
+              <Route path="Connexion" element={<Navigate to="/Profil" />} />
             </>
           )}
 

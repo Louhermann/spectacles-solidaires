@@ -102,9 +102,9 @@ export const logOut = (bool) => ({
 export const SAVE_USER = 'SAVE_USER';
 
 // ACTION CREATOR saveUser
-export const saveUser = (user) => ({
+export const saveUser = (users) => ({
   type: SAVE_USER,
-  user,
+  users,
 });
 
 // ACTION TYPE CREATE_USER
@@ -121,4 +121,22 @@ export const GET_USER = 'GET_USER';
 // ACTION CREATOR getuser
 export const getUser = () => ({
   type: GET_USER,
+});
+
+// ACTION TYPE GET_USER_BY_ID
+export const GET_USER_BY_ID = 'GET_USER_BY_ID';
+
+// ACTION CREATOR getUserById
+export const getUserById = () => ({
+  type: GET_USER_BY_ID,
+
+});
+
+// ACTION TYPE SAVE_USER_LOGGED
+export const SAVE_USER_LOGGED = 'SAVE_USER_LOGGED';
+
+// ACTION CREATOR saveUserLogged
+export const saveUserLogged = (user) => ({
+  type: SAVE_USER_LOGGED,
+  user,
 });

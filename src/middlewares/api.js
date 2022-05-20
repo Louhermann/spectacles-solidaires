@@ -10,13 +10,13 @@ import {
   saveUser,
   CREATE_USER,
   GET_USER,
+  GET_USER_BY_ID,
 } from '../actions';
 
 const axiosInstance = axios.create({
   baseURL: 'http://al1santa-server.eddi.cloud/projet-14-spectacles-solidaires-back/public/api/',
 
 });
-// const dispatch = useDispatch();
 
 const apiMiddleWare = (store) => (next) => (action) => {
   const { token } = store.getState();
@@ -117,14 +117,38 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          store.dispatch(saveUser(response.data.user));
-          console.log(response.data);
+          store.dispatch(saveUser(response.data.users));
+          console.log(response.data.users);
         })
         .catch(() => {
         });
       next(action);
       break;
     }
+    case GET_USER_BY_ID: {
+      const { signIn: { username } } = store.getState();
+      const { users } = store.getState();
+      const { id } = users.find((user) => username === user.email);
+      axiosInstance
+        .delete(
+          `user/delete/${id}`,
+          {
+            headers:
+            {
+              Authorization: `Bearer ${token}`,
+            },
+          },
+        )
+        .then((response) => {
+          console.log(response);
+          console.log('profil supprimé');
+        })
+        .catch(() => {
+        });
+      next(action);
+      break;
+    }
+
     default:
       next(action);
   }

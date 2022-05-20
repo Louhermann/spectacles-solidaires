@@ -7,30 +7,28 @@ import {
   SET_IS_LOGGED,
   LOG_OUT,
   SAVE_USER,
+  SAVE_USER_LOGGED,
 } from '../actions';
 
 const initialState = {
   isLogged: false,
 
   signIn: {
-    username: 'admin@admin.com',
-    password: 'admin',
+    username: '',
+    password: '',
   },
 
   signUp: {
-    email: 'a@gmail',
-    password: 'azerty',
-    lastname: 'azerty',
-    firstname: 'azerty',
+    email: '',
+    password: '',
+    lastname: '',
+    firstname: '',
   },
 
   user: {
-    lastname: '',
-    firstname: '',
-    email: '',
-    password: '',
-    avatar: 'https://bootdey.com/img/Content/avatar/avatar7.png',
   },
+  avatar: 'https://bootdey.com/img/Content/avatar/avatar7.png',
+  users: [],
 
   slider: {
     goToSlide: 0,
@@ -47,7 +45,7 @@ const initialState = {
   // },
 
   events: [],
-  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTMwMzM4MzIsImV4cCI6MTY1MzA5ODYzMiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSJ9.NFMsQZiSc8AsnvzvMaDlZLlGVPQ0MrzJor2ocActJjAehv9C1M7BlLgQ-BFcD3IiZm_qGcLp9fL3eGqTRvF9tV_Yrnxoqvi8GM90PIphNy4pUPxUr0LhvdppF8vhC7VGoyTvdEQs8aUK7AKSjUZBbjmIkAm77xkzLR0NPM39tArpQ5fFf-feEIswdOLtNQ60gZ7WsQcitlTejqtDPFfv9Oo7AVt2O8RNef8Y5FEBzj3yWG5uvlfoc5ceGh84_rgZyUe4TdaO-FC8Xnpa90uZtBPOhemwUMuqW0CqF4oULXYpC8T-hX0prGoO6G-Alv2FwHJq0f1CvQOwYL3yRGkjAg',
+  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTMwNDAwODIsImV4cCI6MTY1MzEwNDg4Miwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSJ9.okJlOgPo5mtnDycb1X5NXmxEOlj4z3CC65LuQqkVjiub-28V5pti-n6Hr_ZGBylHau7YkF8Oiql6rE2uahV5vsjCP6ZcTXPJNLhfegc1IWCmYVh0uvpOd_dzNe2shCvhk5t2VHjY5h0zwWf_kSDxz0cyby1vFZJiiA7paYUJ9ynovICu-4o91XpzGTm0nyY-gj60uSwlsXmwf6aTLCmgLnltLR1c9UpuaVtVAxsaK0b9_Vbovke71Tnk3PWkbZVe1HcywveOZMXYYqMHKlEjqHs5WbeoBgJ2ZPSJVRR-H7sTHod5U5IzVgsp_VRDp7CEo_AwdM6xhfqtAB8g3Cd-ww',
 };
 
 function mainReducers(state = initialState, action = {}) {
@@ -105,12 +103,20 @@ function mainReducers(state = initialState, action = {}) {
         ...state,
         isLogged: action.bool,
       };
+      // save all users
     case SAVE_USER:
       return {
         ...state,
-        user: {
-          ...state.user,
-        },
+        users:
+         action.users
+        ,
+      };
+      // save id user
+    case SAVE_USER_LOGGED:
+      return {
+        ...state,
+        user: action.user
+        ,
       };
     default:
       return state;
