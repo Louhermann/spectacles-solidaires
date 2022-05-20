@@ -23,6 +23,7 @@ function Navbar() {
     dispatch(logOut(false));
     navigate('/Connexion');
   }
+
   return (
     <div className={hamburgerOpen ? 'navbar-open' : 'navbar'}>
 
@@ -84,24 +85,6 @@ function Navbar() {
               </li>
             </>
           ) }
-          {/* <NavLink className="list-item" to="Connexion">
-              <AiOutlineUser
-                size="40px"
-                title="se connecter"
-                display="flex"
-                text-align="-webkit-center"
-                className="icon"
-              />
-              { !isLogged ? 'Se connecter' : 'Se deconnecter'}
-              { isLogged
-              && (
-              <button
-                type="button"
-                onClick={handleLogOut}
-              >
-                Se Déconnecter
-              </button>
-              )} */}
 
         </ul>
       </nav>
