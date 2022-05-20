@@ -68,6 +68,7 @@
     "react-slideshow-image": "^3.7.3",
     "react-spring": "^9.4.4",
     "react-spring-3d-carousel": "^1.2.1",
-    "redux": "^4.2.0"
+    "redux": "^4.2.0",
+    "swiper": "^8.1.5"
   }
 }

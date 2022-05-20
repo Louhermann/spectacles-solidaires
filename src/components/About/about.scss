@@ -1,73 +1,82 @@
-// ACTORS
+.about {
 
-.actors {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100%;
+  font-size: 1.5em;
+  text-align: center;
+
+
+@media screen and (min-width: 279px) {
+
+  .accordion {
+    background-color: #FFE8D2;
+    cursor: pointer;
+    padding: 18px;
+    width: 75%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: 0.5em;
+    border-radius: 20px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: #FFE8D2;
+    display: none;
+    overflow: hidden;
+    width: 75%;
+    margin: auto;
+    border-radius: 20px;
+
+  }
+
+.about_actors_image {
+  background-image: url("../../assets/images/Model/images/about-image.png");
+  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 185px;
+  width: 100%;
 }
 
-.section-title {
-    font-size: 3rem;
+
+.about_title {
+    font-size: 2.25rem;
+    padding: 0.5em;
     font-weight: bold;
     font-family: 'Allura', sans-serif;
 }
 
-.actors-card {
-  position: relative;
-  min-width: 320px;
-  height: 440px;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  margin: 30px;
-  transition: 0.5s;
+.about_actors_list-title {
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
 }
 
-.actors-box {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-//   background: #2a2b2f;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: 0.5s;
+.about_actors_list-item {
+  padding: 2em;
 }
 
-.actors-box-content {
-  padding: 20px;
-  text-align: center;
-}
-
-.actors-box-content-title {
-  font-size: 1.8rem;
-  color: #fff;
-  z-index: 1;
-  transition: 0.5s;
-  margin-bottom: 15px;
-}
-
- .actors-box-content-p {
-  font-size: 1rem;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
-  z-index: 1;
-  transition: 0.5s;
+.about_actors_list-content {
   padding: 0.5em;
 }
 
-span {
-  font-weight: bold;
-
+.about_actors_list-subtitle {
+  padding: 0.5em;
+  font-size: 1.25em;
+  font-style: italic;
 }
 
+
+
+span {
+  font-weight: bold;
+}
 
 
 // PROCESS
@@ -100,13 +109,16 @@ span {
   border-radius: 15px;
   margin: 30px;
   transition: 0.5s;
+  // background-color: #FFE8D2;
+  color: black;
 }
+
 .process-card:nth-child(1) .process-box-content-a {
   background: #2196f3;
 }
 
 .process-card:nth-child(2)  .process-box-content-a {
-  background: #e91e63;
+  background: #7f00ff;
 }
 
 .process-card:nth-child(3) .process-box-content-a {
@@ -114,7 +126,7 @@ span {
 }
 
 .process-card:nth-child(4) .process-box-content-a {
-  background: #7f00ff;
+  background: #e91e63;
 }
 
 .process-box {
@@ -130,6 +142,8 @@ span {
   align-items: center;
   overflow: hidden;
   transition: 0.5s;
+  color: black;
+
 }
 
  .process-box:hover {
@@ -160,18 +174,19 @@ span {
 }
  .process-box-content-title {
   font-size: 1.8rem;
-  color: #fff;
   z-index: 1;
   transition: 0.5s;
   margin-bottom: 15px;
+  color: black;
 }
 
  .process-box-content-p {
   font-size: 1rem;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
   z-index: 1;
   transition: 0.5s;
+  padding: 0.5em;
+  color: black;
 }
 
  .process-box-content-a {
@@ -185,9 +200,64 @@ span {
   margin-top: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
+  font-size: 0.75em;
 }
  .process-box-content-a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
   background: #fff;
   color: #000;
 }
+
+
+}
+
+
+@media screen and (min-width: 409px) {
+  .about_actors_image {
+    height: 278px;
+  }
+
+}
+
+@media screen and (min-width: 599px) {
+  .about_actors_image {
+    height: 380px;
+  }
+
+  .about_title {
+    font-size: 3.5rem;
+  }
+  .about_actors_list-title { 
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 848px) {
+  .about_actors_image {
+    height: 462px;
+  }
+}
+
+
+
+@media screen and (min-width: 1023px) {
+  .about_actors_image {
+    height: 620px;
+  }
+
+  .about_title {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .about_actors_image {
+    height: 900px;
+  }
+  .about_title {
+    font-size: 5.5rem;
+  }
+}
+
+}
+
