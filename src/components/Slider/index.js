@@ -1,14 +1,6 @@
 import Cards from './Card';
 import Coverflow from './Coverflow';
-// import { useState, useEffect } from 'react';
-// Import Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import {
-//   EffectCoverflow,
-//   Pagination,
-//   Autoplay,
-//   EffectCards,
-// } from 'swiper';
+
 import useWindowSize from './size';
 
 function Slider() {

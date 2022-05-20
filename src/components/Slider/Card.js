@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import {
@@ -34,7 +35,11 @@ function Cards() {
         }}
       >
         {events.map((event) => (
-          <SwiperSlide key={event.id}><img src={event.picture_2} alt="1" /></SwiperSlide>
+          <SwiperSlide key={event.id}>
+            <NavLink to={`Catalogue/spectacle/${event.id}`}>
+              <img src={event.picture_2} alt="1" />
+            </NavLink>
+          </SwiperSlide>
         ))}
       </Swiper>
 
