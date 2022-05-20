@@ -1,6 +1,7 @@
 // Import styles
 import './home.scss';
 import Slider from 'src/components/Slider';
+import Button from 'src/components/Button';
 
 // == Img
 
@@ -23,6 +24,10 @@ function Home() {
           à la culture auprès de tous, qu’ils puissent la partager et s’entraider.
         </p>
 
+      </div>
+
+      <div>
+        <Button />
       </div>
       <div>
         <Slider />

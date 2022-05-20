@@ -1,34 +1,36 @@
 import { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import ParticleEffectButton from 'react-particle-effect-button';
 import './button.scss';
 
 function Button() {
+  const navigate = useNavigate();
   const [hidden, setHidden] = useState(false);
   const toggleHidden = () => {
     setHidden(!hidden);
   };
+  const GoTimeOut = () => {
+    setHidden(!hidden);
+    setTimeout(() => {
+      navigate('/Apropos');
+    }, 1200);
+  };
 
-  return (
-    <Fragment>
+    return (
     <ParticleEffectButton 
       color="#121019" 
       hidden={hidden}>
-      <button
-        style={{
-          background: '#121019',
-          color: '#fff',
-          padding: '1.5rem 3rem',
-          border: '0',
-          borderRadius: 5,
-          cursor: 'pointer',
-          fontSize: '1.2em',
-        }}
-      onClick={toggleHidden}
-   >
-En savoir plus sur notre concept solidaire
-    </button>
-  </ParticleEffectButton>
-  </Fragment>
+         {/* <NavLink to="Apropos" > */}
+      <button 
+         onClick={GoTimeOut}
+        className="home_button"
+        type='button'
+    >
+   En savoir plus sur notre concept solidaire
+      </button>
+    {/* </NavLink> */}
+    </ParticleEffectButton>
+
 );
 }
 

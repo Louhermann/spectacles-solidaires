@@ -41,6 +41,8 @@
   background-repeat: no-repeat;
   height: 185px;
   width: 100%;
+  margin: auto;
+
 }
 
 
@@ -219,10 +221,11 @@ span {
 
 }
 
-@media screen and (min-width: 599px) {
-  .about_actors_image {
-    height: 380px;
-  }
+@media screen and (min-width: 566px) {
+  // .about_actors_image {
+  //   height: 420px;
+  //   width: 33em;
+  // }
 
   .about_title {
     font-size: 3.5rem;
@@ -232,31 +235,49 @@ span {
   }
 }
 
-@media screen and (min-width: 848px) {
+@media screen and (min-width: 599px) {
   .about_actors_image {
-    height: 462px;
+    height: 272px;
+    width: 23em;
+  }
+}
+
+// @media screen and (min-width: 682px) {
+//   .about_actors_image {
+//     height: 520px;
+//     width: 41em;
+//   }
+// }
+
+@media screen and (min-width: 707px) {
+  .about_actors_image {
+    height: 357px;
+    width: 30em;
   }
 }
 
 
-
 @media screen and (min-width: 1023px) {
-  .about_actors_image {
-    height: 620px;
-  }
+  // .about_actors_image {
+  //   height: 600px;
+  //   width: 52em;
+  // }
 
   .about_title {
     font-size: 4.5rem;
   }
+
+  .about_actors_list-title, .panel { 
+    width: 33em
+  }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1499px) {
   .about_actors_image {
-    height: 900px;
+    height: 585px;
+    width: 50em;
   }
-  .about_title {
-    font-size: 5.5rem;
-  }
+
 }
 
 }
