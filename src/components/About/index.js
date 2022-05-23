@@ -29,11 +29,11 @@ function About() {
         <section className="about_actors">
 
           <div className="about_actors_image" />
-          <h2 className="about_title">Les acteurs</h2>
+          <h2 className="about_actors_title">Les acteurs</h2>
 
           <button
             type="button"
-            className={isActive1 ? 'about_actors_list-title accordion active' : 'about_actors_list-title accordion'}
+            className={isActive1 ? 'about_actors_list-title about_accordion about_active' : 'about_actors_list-title about_accordion'}
             onClick={toggleClassOne}
 
           >
@@ -41,7 +41,7 @@ function About() {
           </button>
 
           <div
-            className="panel"
+            className="about_actors_panel"
             style={{
               display: isActive1 ? 'block' : 'none',
             }}
@@ -60,7 +60,7 @@ function About() {
               Qui est concerné?
             </h2>
             <p className="about_actors_list-content">
-              <span>
+              <span lassName="about_actors_span">
                 &nbsp;Tout organisme privé ou public
                 souhaitant faire intervenir un spectacle
                 vivant peux aider.&nbsp;
@@ -83,7 +83,7 @@ function About() {
           >
             <p className="about_actors_list-content">
               Les organismes aidés sont des
-              <span>
+              <span className="about_actors_span">
                 &nbsp;associations
                 solidaires caritatives&nbsp;
               </span>
@@ -100,7 +100,7 @@ function About() {
               Qui est concerné?
             </h2>
             <p className="about_actors_list-content">
-              <span>
+              <span className="about_actors_span">
                 &nbsp;Toute associations ayant un public n'ayant pas ou peu accès aux spectacles
                 vivants peut devenir partenaire du concept "spectacles solidaires".&nbsp;
               </span>
@@ -123,7 +123,7 @@ function About() {
             <p className="about_actors_list-content">
               "Les spectacles solidaires" ouvrent un
               partenariat avec des
-              <span>
+              <span className="about_actors_span">
                 &nbsp;compagnies de
                 théâtres et des artistes indépendants&nbsp;
               </span>qui
@@ -134,7 +134,7 @@ function About() {
               Qui est concerné?
             </h2>
             <p className="about_actors_list-content">
-              <span>
+              <span className="about_actors_span">
                 &nbsp;Toute compagnie de
                 théâtre et  artiste indépendant ayant à coeur de diffuser ses
                 spectacle à un public varié et nottament à ceux qui n'ont habituellement

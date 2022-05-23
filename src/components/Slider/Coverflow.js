@@ -38,10 +38,10 @@ function Coverflow() {
         pagination
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
-        // autoplay={{
-        //   delay: 3500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
       >
         {events.map((event) => (
           <SwiperSlide key={event.id}>

@@ -129,6 +129,13 @@
           margin: 0.5em auto;
           font-weight: bold;
         }
+
+        // &--picutre {
+        //   background-image: url(../../assets/images/Model/images/cadre.png);
+        //   background-repeat: no-repeat;
+        //   background-size: cover;
+        //   background-position: center;
+        // }
       }
       &__middle{
   
@@ -207,9 +214,7 @@
       width: 100%;
 
       &--back {
-
         right: 0;
-        background-color: white;
         width: 70%;
         height: auto;
         margin: 2rem auto;
