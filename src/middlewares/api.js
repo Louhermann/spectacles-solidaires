@@ -61,10 +61,12 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
+          console.log('connexion');
           store.dispatch(saveToken(response.data.token));
           store.dispatch(setIsLogged(true));
         })
-        .catch(() => {
+        .catch((err) => {
+          console.log(err, 'oups');
         });
 
       next(action);

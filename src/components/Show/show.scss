@@ -130,12 +130,6 @@
           font-weight: bold;
         }
 
-        // &--picutre {
-        //   background-image: url(../../assets/images/Model/images/cadre.png);
-        //   background-repeat: no-repeat;
-        //   background-size: cover;
-        //   background-position: center;
-        // }
       }
       &__middle{
   
@@ -214,6 +208,7 @@
       width: 100%;
 
       &--back {
+        background-color: white;
         right: 0;
         width: 70%;
         height: auto;
@@ -358,7 +353,7 @@
         top: 43%; 
         left: 40%; 
         transform: translate(-50%, -50%) rotate(5deg); 
-        background-color: white;
+        // background-color: white;
         width: 90%;
       }
       &--picture{
@@ -459,6 +454,8 @@
     }
     
   }
+
+
     &--picture {
       display: block;
       position: absolute;
@@ -477,7 +474,7 @@
       top: 45%; 
       width:100%;
     }
-
+    
     &--picture {
       height: auto;
       margin: 1.5rem auto 0;

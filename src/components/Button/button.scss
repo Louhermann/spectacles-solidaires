@@ -1,8 +1,11 @@
+@use 'src/styles/vars';
+
 @media (min-width: 278px) {
 .home_button {
   margin: 1em 0;
-  background: linear-gradient(to left, #7f00ff, black);
-  color: #fff;
+  background: linear-gradient(to left, vars.$home-button, vars.$classic-black);
+  opacity: 0.5;
+  color: vars.$classic-white;
   padding: .75rem 1.75rem;
   border: 0;
   border-radius: 5;

@@ -1,4 +1,3 @@
-// == Import
 import Hamburger from 'hamburger-react';
 import { useState } from 'react';
 import { AiOutlineUser } from 'react-icons/ai';
