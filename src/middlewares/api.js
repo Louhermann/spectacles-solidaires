@@ -61,7 +61,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          console.log('connexion');
+          // console.log('connexion');
           store.dispatch(saveToken(response.data.token));
           store.dispatch(setIsLogged(true));
         })
@@ -99,7 +99,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then(() => {
-          console.log('utilisateur crée');
+          // console.log('utilisateur crée');
         })
         .catch(() => {
         });
@@ -120,7 +120,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .then((response) => {
           store.dispatch(saveUser(response.data.users));
-          console.log(response.data.users);
+          // console.log(response.data.users);
         })
         .catch(() => {
         });
@@ -141,9 +141,9 @@ const apiMiddleWare = (store) => (next) => (action) => {
             },
           },
         )
-        .then((response) => {
-          console.log(response);
-          console.log('profil supprimé');
+        .then(() => {
+        //   console.log(response);
+        //   console.log('profil supprimé');
         })
         .catch(() => {
         });

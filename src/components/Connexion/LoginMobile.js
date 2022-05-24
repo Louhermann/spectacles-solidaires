@@ -23,7 +23,7 @@ function LoginMobile() {
   }
 
   function handleSubmitSignIn(evt) {
-    console.log('envoyer');
+    // console.log('envoyer');
     evt.preventDefault();
     dispatch(login());
     dispatch(getUser());
