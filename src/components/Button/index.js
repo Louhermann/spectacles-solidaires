@@ -13,25 +13,27 @@ function Button() {
     setHidden(!hidden);
     setTimeout(() => {
       navigate('/Apropos');
+      window.scrollTo({ top: 0 });
     }, 1200);
   };
 
-    return (
-    <ParticleEffectButton 
-      color="#121019" 
-      hidden={hidden}>
-         {/* <NavLink to="Apropos" > */}
-      <button 
-         onClick={GoTimeOut}
-        className="home_button"
-        type='button'
+  return (
+    <ParticleEffectButton
+      color="#121019"
+      hidden={hidden}
     >
-   En savoir plus sur notre concept solidaire
+      {/* <NavLink to="Apropos" > */}
+      <button
+        onClick={GoTimeOut}
+        className="home_button"
+        type="button"
+      >
+        En savoir plus sur notre concept solidaire
       </button>
-    {/* </NavLink> */}
+      {/* </NavLink> */}
     </ParticleEffectButton>
 
-);
+  );
 }
 
 export default Button;
